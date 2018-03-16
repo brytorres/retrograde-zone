@@ -1,0 +1,33 @@
+- create database
+- configure db in env
+- create migration
+- create seeds
+- make:model
+- migrate + db:seed
+
+- make:controller --resource
+  - rm create, edit, update
+-create api routes
+  - Route::get('url-name(s)', 'Controller@index') \\ LIST
+  - Route::get('url-name/{id}', 'Controller@show') \\ SINGLE
+  - Route::post('url-name', 'Controller@store') \\ CREATE
+  - Route::put('url-name', 'Controller@store') \\ UPDATE
+  - Route::delete('url-name', 'Controller@destroy') \\ DELETE
+- make:resource NAME
+  - toArray \\ returns all
+- Get data in Controller
+  - @index
+    - use App\Http\Requests;
+    - use App\Model;
+    - use App\Http\Resources\Model as ModelResource;
+
+    - $planets = Planet::paginate(1)
+    - return PlanetResource::collection($planets)
+  - @store($id)
+    - $planet = Planet::findOrFail($id); 
+    - return new PlanetResource($planet);
+- edit Resource toArray
+  - comment out whats there
+  - return ['data...' => $this->id,];
+  - new function with($request)
+    - return ['my_data' => 'whatever','etc...']
