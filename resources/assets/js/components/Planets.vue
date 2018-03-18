@@ -8,7 +8,7 @@
       </div>
     </ol> -->
 
-    <h2>{{ allRetrogrades.day_of_year }}</h2>
+    <h2>{{ todaysRetrogrades }}</h2>
 
   </div>
 </template>
@@ -33,10 +33,9 @@
     },
 
     created() {
-      // let day_of_year = this.getDOY();
+      let day_of_year = this.getDOY();
       
-      this.fetchPlanets();
-      
+      this.fetchPlanets(day_of_year);
     },
 
     methods: {
@@ -58,15 +57,15 @@
         var dayOfYear = dayCount[mn] + dn;
         if(mn > 1 && this.isLeapYear()) dayOfYear++;
         this.day_of_year = dayOfYear;
-        return dayOfYear;
+        return dayOfYear - 1;
       },
 
-      fetchPlanets() {
+      fetchPlanets(day_of_year) {
         fetch('api/planets')
           .then(res => res.json())
           .then(res => {
             this.allRetrogrades = res.data;
-            console.log(res.data);
+            this.todaysRetrogrades = this.allRetrogrades[day_of_year];
           })
           .catch(err => console.log(err));
       }

@@ -47276,7 +47276,7 @@ var render = function() {
   return _c("div", [
     _c("h2", [_vm._v("Retrograde Zone")]),
     _vm._v(" "),
-    _c("h2", [_vm._v(_vm._s(_vm.allRetrogrades.day_of_year))])
+    _c("h2", [_vm._v(_vm._s(_vm.todaysRetrogrades))])
   ])
 }
 var staticRenderFns = []
@@ -47329,9 +47329,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
   created: function created() {
-    // let day_of_year = this.getDOY();
+    var day_of_year = this.getDOY();
 
-    this.fetchPlanets();
+    this.fetchPlanets(day_of_year);
   },
 
 
@@ -47355,16 +47355,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var dayOfYear = dayCount[mn] + dn;
       if (mn > 1 && this.isLeapYear()) dayOfYear++;
       this.day_of_year = dayOfYear;
-      return dayOfYear;
+      return dayOfYear - 1;
     },
-    fetchPlanets: function fetchPlanets() {
+    fetchPlanets: function fetchPlanets(day_of_year) {
       var _this = this;
 
       fetch('api/planets').then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.allRetrogrades = res.data;
-        console.log(res.data);
+        _this.todaysRetrogrades = _this.allRetrogrades[day_of_year];
       }).catch(function (err) {
         return console.log(err);
       });
