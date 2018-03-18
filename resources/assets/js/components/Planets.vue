@@ -8,7 +8,41 @@
       </div>
     </ol> -->
 
-    <h2>{{ todaysRetrogrades }}</h2>
+    <h2>{{ day_of_year }}</h2>
+
+    <div class="ui stackable eight column grid">
+      <div class="column">
+         <h2>Mercury</h2>
+      </div>
+
+      <div class="column">
+        <h2>Venus</h2>
+      </div>
+
+      <div class="column">
+        <h2>Mars</h2>
+      </div>
+
+      <div class="column">
+        <h2>Jupiter</h2>
+      </div>
+
+      <div class="column">
+        <h2>Saturn</h2>
+      </div>
+
+      <div class="column">
+        <h2>Uranus</h2>
+      </div>
+
+      <div class="column">
+        <h2>Neptune</h2>
+      </div>
+
+      <div class="column">
+        <h2>Pluto</h2>
+      </div>  
+    </div>
 
   </div>
 </template>
@@ -19,7 +53,7 @@
       return {
         allRetrogrades: [],
         todaysRetrogrades: [],
-        // day_of_year: 0,
+        day_of_year: 0,
         retrograde: {
           day_of_year: '',
           planet_name: '',
@@ -60,6 +94,7 @@
         return dayOfYear - 1;
       },
 
+      // Get retrograde data from API
       fetchPlanets(day_of_year) {
         fetch('api/planets')
           .then(res => res.json())

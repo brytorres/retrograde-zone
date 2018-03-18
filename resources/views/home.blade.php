@@ -9,8 +9,10 @@
 
         <title>Retrograde Zone - What Planets Are In Retrograde?</title>
 
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
+
         <div id="app">
             <planets></planets>
         </div>

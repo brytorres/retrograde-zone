@@ -47276,10 +47276,35 @@ var render = function() {
   return _c("div", [
     _c("h2", [_vm._v("Retrograde Zone")]),
     _vm._v(" "),
-    _c("h2", [_vm._v(_vm._s(_vm.todaysRetrogrades))])
+    _c("h2", [_vm._v(_vm._s(_vm.day_of_year))]),
+    _vm._v(" "),
+    _vm._m(0)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ui stackable eight column grid" }, [
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Mercury")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Venus")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Mars")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Jupiter")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Saturn")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Uranus")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Neptune")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Pluto")])])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -47310,13 +47335,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       allRetrogrades: [],
       todaysRetrogrades: [],
-      // day_of_year: 0,
+      day_of_year: 0,
       retrograde: {
         day_of_year: '',
         planet_name: '',
@@ -47357,6 +47416,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.day_of_year = dayOfYear;
       return dayOfYear - 1;
     },
+
+
+    // Get retrograde data from API
     fetchPlanets: function fetchPlanets(day_of_year) {
       var _this = this;
 
