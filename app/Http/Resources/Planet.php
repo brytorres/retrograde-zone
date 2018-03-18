@@ -19,7 +19,7 @@ class Planet extends JsonResource
         return [
             'day_of_year' => $this->id,
             'month' => $this->month,
-            'day' => $this->day,
+            'day_of_month' => $this->day,
             'mercury_direction' => $this->mercury_direction,
             'mercury_sign' => $this->mercury_sign,
             'mercury_time' => $this->mercury_time,
