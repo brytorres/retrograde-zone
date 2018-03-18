@@ -1,49 +1,94 @@
 <template>
-  <div>
-    <h2>Retrograde Zone</h2>
+  <div class="container">
 
-    <!-- <ol>
-      <div v-for="dailyRetrogrades in allRetrogrades" v-bind:key="allRetrogrades.id">
-        <li> {{ dailyRetrogrades.mercury_direction }} </li>
-      </div>
-    </ol> -->
-
-    <h2>{{ day_of_year }}</h2>
-
-    <div class="ui stackable eight column grid">
-      <div class="column">
-         <h2>Mercury</h2>
-      </div>
-
-      <div class="column">
-        <h2>Venus</h2>
-      </div>
-
-      <div class="column">
-        <h2>Mars</h2>
-      </div>
-
-      <div class="column">
-        <h2>Jupiter</h2>
-      </div>
-
-      <div class="column">
-        <h2>Saturn</h2>
-      </div>
-
-      <div class="column">
-        <h2>Uranus</h2>
-      </div>
-
-      <div class="column">
-        <h2>Neptune</h2>
-      </div>
-
-      <div class="column">
-        <h2>Pluto</h2>
-      </div>  
+    <div class="date-section" style="display: inline-block;">
+      <button v-on:click="subtractDay">Previous Day</button>
+      {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
+      <button v-on:click="addDay">Next Day</button>
     </div>
 
+    <div class="columns">
+      <div class="column planet-box">
+        <h2 class="planet-name">Mercury</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.mercury_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.mercury_time">{{ todaysRetrogrades.mercury_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.mercury_sign">{{ todaysRetrogrades.mercury_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.mercury_degrees">{{ todaysRetrogrades.mercury_degrees }}&deg; </span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.mercury_minutes">{{ todaysRetrogrades.mercury_minutes }}'</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Venus</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.venus_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.venus_time">{{ todaysRetrogrades.venus_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.venus_sign">{{ todaysRetrogrades.venus_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.venus_degrees">{{ todaysRetrogrades.venus_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.venus_minutes">{{ todaysRetrogrades.venus_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Mars</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.mars_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.mars_time">{{ todaysRetrogrades.mars_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.mars_sign">{{ todaysRetrogrades.mars_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.mars_degrees">{{ todaysRetrogrades.mars_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.mars_minutes">{{ todaysRetrogrades.mars_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Jupiter</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.jupiter_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.jupiter_time">{{ todaysRetrogrades.jupiter_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.jupiter_sign">{{ todaysRetrogrades.jupiter_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.jupiter_degrees">{{ todaysRetrogrades.jupiter_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.jupiter_minutes">{{ todaysRetrogrades.jupiter_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column planet-box">
+        <h2 class="planet-name">Saturn</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.saturn_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.saturn_time">{{ todaysRetrogrades.saturn_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.saturn_sign">{{ todaysRetrogrades.saturn_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.saturn_degrees">{{ todaysRetrogrades.saturn_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.saturn_minutes">{{ todaysRetrogrades.saturn_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Uranus</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.uranus_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.uranus_time">{{ todaysRetrogrades.uranus_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.uranus_sign">{{ todaysRetrogrades.uranus_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.uranus_degrees">{{ todaysRetrogrades.uranus_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.uranus_minutes">{{ todaysRetrogrades.uranus_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Neptune</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.neptune_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.neptune_time">{{ todaysRetrogrades.neptune_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.neptune_sign">{{ todaysRetrogrades.neptune_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.neptune_degrees">{{ todaysRetrogrades.neptune_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.neptune_minutes">{{ todaysRetrogrades.neptune_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+
+      <div class="column planet-box">
+        <h2 class="planet-name">Pluto</h2>
+        <img src="http://via.placeholder.com/100x100" alt="">
+        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.pluto_direction }}</span></p>
+        <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.pluto_time">{{ todaysRetrogrades.pluto_time }}</span><span class="time-false" v-else>No Event</span></p>
+        <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.pluto_sign">{{ todaysRetrogrades.pluto_sign }}</span><span class="sign-false" v-else>No Event</span></p>
+        <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.pluto_degrees">{{ todaysRetrogrades.pluto_degrees }}</span><span class="degrees-false" v-else>No Event</span></p>
+        <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.pluto_minutes">{{ todaysRetrogrades.pluto_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -103,6 +148,26 @@
             this.todaysRetrogrades = this.allRetrogrades[day_of_year];
           })
           .catch(err => console.log(err));
+      },
+
+      subtractDay() {
+        console.log('sub');
+        this.day_of_year -= 1;
+        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+      
+        // fetch('api/planets')
+        //   .then(res => res.json())
+        //   .then(res => {
+        //     this.allRetrogrades = res.data;
+        //     this.todaysRetrogrades = this.allRetrogrades[day_of_year];
+        //   })
+        //   .catch(err => console.log(err));
+      },
+
+      addDay() {
+        console.log('add');
+        this.day_of_year += 1;
+        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       }
     }
   }

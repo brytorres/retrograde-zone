@@ -1,0 +1,37 @@
+// .planets-box {
+//   padding: 3rem;
+// }
+
+.date-section {
+  // margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.planet-name {
+  color: red;
+}
+
+.planet-box {
+  background: rgba(255,255,255,0.2);
+  margin: 5px;
+}
+
+.planet-box img {
+  margin: 0 auto;
+  display: block;
+}
+
+.planet-name {
+  text-align: center;
+}
+
+.info {
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.direction {
+  color: blue;
+}

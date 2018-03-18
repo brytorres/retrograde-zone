@@ -1,3 +1,16 @@
 body {
   background: $body-bg;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+p {
+  line-height: 10px;
 }

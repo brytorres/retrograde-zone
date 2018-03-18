@@ -47273,38 +47273,439 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h2", [_vm._v("Retrograde Zone")]),
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      { staticClass: "date-section", staticStyle: { display: "inline-block" } },
+      [
+        _c("button", { on: { click: _vm.subtractDay } }, [
+          _vm._v("Previous Day")
+        ]),
+        _vm._v(
+          "\n    " +
+            _vm._s(_vm.todaysRetrogrades.month) +
+            " " +
+            _vm._s(_vm.todaysRetrogrades.day_of_month) +
+            ", 2018\n    "
+        ),
+        _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")])
+      ]
+    ),
     _vm._v(" "),
-    _c("h2", [_vm._v(_vm._s(_vm.day_of_year))]),
+    _c("div", { staticClass: "columns" }, [
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Mercury")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mercury_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.mercury_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.mercury_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.mercury_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_degrees) + "° ")
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.mercury_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_minutes) + "'")
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Venus")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.venus_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.venus_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.venus_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.venus_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.venus_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Mars")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mars_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.mars_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.mars_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.mars_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.mars_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Jupiter")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.jupiter_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.jupiter_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.jupiter_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.jupiter_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.jupiter_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ])
+    ]),
     _vm._v(" "),
-    _vm._m(0)
+    _c("div", { staticClass: "columns" }, [
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Saturn")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.saturn_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.saturn_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.saturn_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.saturn_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.saturn_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Uranus")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.uranus_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.uranus_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.uranus_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.uranus_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.uranus_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Neptune")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.neptune_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.neptune_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.neptune_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.neptune_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.neptune_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column planet-box" }, [
+        _c("h2", { staticClass: "planet-name" }, [_vm._v("Pluto")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Direction: "),
+          _c("span", { staticClass: "direction" }, [
+            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.pluto_direction))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Time of Event: "),
+          _vm.todaysRetrogrades.pluto_time
+            ? _c("span", { staticClass: "time-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_time))
+              ])
+            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Sign: "),
+          _vm.todaysRetrogrades.pluto_sign
+            ? _c("span", { staticClass: "sign-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_sign))
+              ])
+            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Degrees: "),
+          _vm.todaysRetrogrades.pluto_degrees
+            ? _c("span", { staticClass: "degrees-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_degrees))
+              ])
+            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "info" }, [
+          _vm._v("Minutes: "),
+          _vm.todaysRetrogrades.pluto_minutes
+            ? _c("span", { staticClass: "minutes-true" }, [
+                _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_minutes))
+              ])
+            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        ])
+      ])
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ui stackable eight column grid" }, [
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Mercury")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Venus")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Mars")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Jupiter")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Saturn")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Uranus")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Neptune")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column" }, [_c("h2", [_vm._v("Pluto")])])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -47320,6 +47721,51 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -47430,6 +47876,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }).catch(function (err) {
         return console.log(err);
       });
+    },
+    subtractDay: function subtractDay() {
+      console.log('sub');
+      this.day_of_year -= 1;
+      this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+
+      // fetch('api/planets')
+      //   .then(res => res.json())
+      //   .then(res => {
+      //     this.allRetrogrades = res.data;
+      //     this.todaysRetrogrades = this.allRetrogrades[day_of_year];
+      //   })
+      //   .catch(err => console.log(err));
+    },
+    addDay: function addDay() {
+      console.log('add');
+      this.day_of_year += 1;
+      this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     }
   }
 });
