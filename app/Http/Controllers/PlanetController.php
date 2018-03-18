@@ -17,7 +17,7 @@ class PlanetController extends Controller
     public function index()
     {
         // Get Planets data
-        $planets = Planet::paginate(1);
+        $planets = Planet::all();
 
         // Return collection as a resource   
         return PlanetResource::collection($planets);
