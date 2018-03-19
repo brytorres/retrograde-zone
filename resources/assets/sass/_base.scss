@@ -1,5 +1,7 @@
 body {
-  background: $body-bg;
+  background: rgb(17, 45, 65);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(17, 45, 65), rgb(46, 46, 77));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(17, 45, 65), rgb(46, 46, 77)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   width: 60%;
   margin: 0 auto;

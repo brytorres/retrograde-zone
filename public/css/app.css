@@ -1896,7 +1896,12 @@
 }
 
 body {
-  background: #1c252b;
+  background: #112d41;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#112d41), to(#2e2e4d));
+  background: linear-gradient(to right, #112d41, #2e2e4d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   width: 60%;
   margin: 0 auto;
@@ -1913,7 +1918,7 @@ p {
 }
 
 .nav {
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 40px 0px;
 }
 
 .nav-title {
@@ -2001,6 +2006,10 @@ hr {
 .planet-box {
   background: rgba(255, 255, 255, 0.1);
   margin: 5px;
+}
+
+.planet-box:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .columns {

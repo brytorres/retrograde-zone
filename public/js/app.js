@@ -47264,182 +47264,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "planets-section" }, [
-    _c("div", { staticClass: "date-section" }, [
-      _c("button", { on: { click: _vm.subtractDay } }, [_vm._v("Prev Day")]),
-      _vm._v(
-        "\n    " +
-          _vm._s(_vm.todaysRetrogrades.month) +
-          " " +
-          _vm._s(_vm.todaysRetrogrades.day_of_month) +
-          ", 2018\n    "
-      ),
-      _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("p", { staticClass: "date-info" }, [_vm._v("Select Any 2018 Date:")]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.month,
-              expression: "month"
-            }
-          ],
-          on: {
-            change: [
-              function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.month = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              },
-              _vm.updateDate
-            ]
-          }
-        },
-        [
-          _c("option", { attrs: { disabled: "", value: "" } }, [
-            _vm._v("Select Month")
-          ]),
-          _vm._v(" "),
-          _c("option", [_vm._v("January")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("February")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("March")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("April")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("May")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("June")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("July")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("August")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("September")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("October")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("November")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("December")])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.day_of_month,
-              expression: "day_of_month"
-            }
-          ],
-          on: {
-            change: [
-              function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.day_of_month = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              },
-              _vm.updateDate
-            ]
-          }
-        },
-        [
-          _c("option", { attrs: { disabled: "", value: "" } }, [
-            _vm._v("Select Day")
-          ]),
-          _vm._v(" "),
-          _c("option", [_vm._v("1")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("2")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("3")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("4")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("5")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("6")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("7")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("8")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("9")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("10")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("11")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("12")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("13")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("14")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("15")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("16")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("17")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("18")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("19")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("20")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("21")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("22")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("23")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("24")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("25")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("26")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("27")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("28")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("29")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("30")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("31")])
-        ]
-      )
-    ]),
-    _vm._v(" "),
     _c("div", { staticClass: "columns" }, [
       _c(
         "div",
@@ -47974,6 +47798,182 @@ var render = function() {
           ])
         ]
       )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "date-section" }, [
+      _c("button", { on: { click: _vm.subtractDay } }, [_vm._v("Prev Day")]),
+      _vm._v(
+        "\n    " +
+          _vm._s(_vm.todaysRetrogrades.month) +
+          " " +
+          _vm._s(_vm.todaysRetrogrades.day_of_month) +
+          ", 2018\n    "
+      ),
+      _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("p", { staticClass: "date-info" }, [_vm._v("Select Any 2018 Date:")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.month,
+              expression: "month"
+            }
+          ],
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.month = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              _vm.updateDate
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { disabled: "", value: "" } }, [
+            _vm._v("Select Month")
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("January")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("February")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("March")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("April")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("May")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("June")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("July")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("August")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("September")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("October")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("November")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("December")])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.day_of_month,
+              expression: "day_of_month"
+            }
+          ],
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.day_of_month = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              _vm.updateDate
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { disabled: "", value: "" } }, [
+            _vm._v("Select Day")
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("1")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("2")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("3")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("4")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("5")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("6")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("7")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("8")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("9")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("10")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("11")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("12")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("13")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("14")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("15")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("16")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("17")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("18")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("19")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("20")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("21")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("22")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("23")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("24")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("25")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("26")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("27")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("28")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("29")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("30")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("31")])
+        ]
+      )
     ])
   ])
 }
@@ -47993,6 +47993,7 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
