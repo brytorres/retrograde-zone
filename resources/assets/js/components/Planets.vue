@@ -230,11 +230,12 @@
 
         let selectedDayofYear = filteredSelectedDay.day_of_year;
 
-
-
+        this.day_of_year = selectedDayofYear - 1;
+        
+        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
         // let selectedDayNumber = filteredSelectedDay.day_of_month;
 
-        console.log(selectedDayofYear);
+        // console.log(selectedDayofYear);
         // console.log(filteredSelectedMonth);
 
         // if (this.month == this.allRetrogrades.month && this.day_of_month == this.allRetrogrades.day_of_month) {
