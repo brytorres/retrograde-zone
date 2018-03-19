@@ -59,7 +59,7 @@
     </div>
 
     <div class="columns">
-      <div class="column planet-box">
+      <div class="column planet-box" style="margin-left:0;">
         <h2 class="planet-name">Mercury</h2>
         <img src="http://via.placeholder.com/100x100" alt="">
         <p class="info" style="text-align:center;">Direction: <br><span class="direction"> {{ todaysRetrogrades.mercury_direction }}</span></p>
@@ -89,7 +89,7 @@
         <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.mars_minutes">{{ todaysRetrogrades.mars_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
       </div>
 
-      <div class="column planet-box">
+      <div class="column planet-box" style="margin-right:0;">
         <h2 class="planet-name">Jupiter</h2>
         <img src="http://via.placeholder.com/100x100" alt="">
         <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.jupiter_direction }}</span></p>
@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column planet-box">
+      <div class="column planet-box" style="margin-left:0;">
         <h2 class="planet-name">Saturn</h2>
         <img src="http://via.placeholder.com/100x100" alt="">
         <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.saturn_direction }}</span></p>
@@ -130,7 +130,7 @@
         <p class="info">Minutes: <span class="minutes-true" v-if="todaysRetrogrades.neptune_minutes">{{ todaysRetrogrades.neptune_minutes }}</span><span class="minutes-false" v-else>No Event</span></p>
       </div>
 
-      <div class="column planet-box">
+      <div class="column planet-box" style="margin-right:0;">
         <h2 class="planet-name">Pluto</h2>
         <img src="http://via.placeholder.com/100x100" alt="">
         <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.pluto_direction }}</span></p>

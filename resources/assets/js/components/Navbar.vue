@@ -11,8 +11,4 @@
     </div> 
     <br>
   </div>
-  <!-- <div class="nav-menu">
-    <a href="/">Home</a>
-  </div>  -->
-
 </template>
