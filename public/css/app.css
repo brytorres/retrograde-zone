@@ -1912,10 +1912,39 @@ p {
   line-height: 10px;
 }
 
+.nav {
+  margin: 10px 0px 10px 0px;
+}
+
+.nav-title {
+  float: left;
+  width: 50%;
+}
+
+.nav-title h1 {
+  color: blue;
+  margin: 0px;
+}
+
+.nav-menu {
+  float: right;
+  text-align: right;
+  width: 50%;
+  display: inline-block;
+}
+
+.planets-section {
+  padding: 1rem 0rem 1rem 0rem;
+}
+
 .date-section {
   text-align: center;
-  display: inline-block;
-  margin: 10px;
+  margin: 10px 0px 20px 0px;
+}
+
+.date-info {
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .planet-name {

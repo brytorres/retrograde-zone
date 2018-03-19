@@ -13866,27 +13866,16 @@ module.exports = __webpack_require__(43);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 __webpack_require__(13);
 
 window.Vue = __webpack_require__(36);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 Vue.component('planets', __webpack_require__(48));
+Vue.component('navbar', __webpack_require__(52));
+Vue.component('footeroonie', __webpack_require__(53));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app'
 });
 
 /***/ }),
@@ -47274,192 +47263,182 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c(
-      "div",
-      { staticClass: "date-section", staticStyle: { display: "inline-block" } },
-      [
-        _c("button", { on: { click: _vm.subtractDay } }, [
-          _vm._v("Previous Day")
-        ]),
-        _vm._v(
-          "\n    " +
-            _vm._s(_vm.todaysRetrogrades.month) +
-            " " +
-            _vm._s(_vm.todaysRetrogrades.day_of_month) +
-            ", 2018 -- " +
-            _vm._s(_vm.todaysRetrogrades.day_of_year) +
-            "\n    "
-        ),
-        _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.month,
-                expression: "month"
-              }
-            ],
-            on: {
-              change: [
-                function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.month = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
-                },
-                _vm.updateDate
-              ]
+  return _c("div", { staticClass: "planets-section" }, [
+    _c("div", { staticClass: "date-section" }, [
+      _c("button", { on: { click: _vm.subtractDay } }, [_vm._v("Prev Day")]),
+      _vm._v(
+        "\n    " +
+          _vm._s(_vm.todaysRetrogrades.month) +
+          " " +
+          _vm._s(_vm.todaysRetrogrades.day_of_month) +
+          ", 2018\n    "
+      ),
+      _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("p", { staticClass: "date-info" }, [_vm._v("Select Any 2018 Date:")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.month,
+              expression: "month"
             }
-          },
-          [
-            _c("option", { attrs: { disabled: "", value: "" } }, [
-              _vm._v("Select Month")
-            ]),
-            _vm._v(" "),
-            _c("option", [_vm._v("January")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("February")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("March")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("April")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("May")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("June")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("July")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("August")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("September")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("October")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("November")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("December")])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.day_of_month,
-                expression: "day_of_month"
-              }
-            ],
-            on: {
-              change: [
-                function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.day_of_month = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
-                },
-                _vm.updateDate
-              ]
+          ],
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.month = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              _vm.updateDate
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { disabled: "", value: "" } }, [
+            _vm._v("Select Month")
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("January")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("February")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("March")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("April")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("May")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("June")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("July")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("August")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("September")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("October")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("November")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("December")])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.day_of_month,
+              expression: "day_of_month"
             }
-          },
-          [
-            _c("option", { attrs: { disabled: "", value: "" } }, [
-              _vm._v("Select Day")
-            ]),
-            _vm._v(" "),
-            _c("option", [_vm._v("1")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("2")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("3")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("4")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("5")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("6")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("7")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("8")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("9")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("10")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("11")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("12")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("13")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("14")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("15")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("16")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("17")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("18")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("19")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("20")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("21")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("22")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("23")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("24")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("25")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("26")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("27")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("28")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("29")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("30")]),
-            _vm._v(" "),
-            _c("option", [_vm._v("31")])
-          ]
-        ),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "Selected: " + _vm._s(_vm.month) + " " + _vm._s(_vm.day_of_month)
-          )
-        ])
-      ]
-    ),
+          ],
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.day_of_month = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              _vm.updateDate
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { disabled: "", value: "" } }, [
+            _vm._v("Select Day")
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("1")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("2")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("3")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("4")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("5")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("6")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("7")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("8")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("9")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("10")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("11")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("12")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("13")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("14")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("15")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("16")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("17")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("18")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("19")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("20")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("21")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("22")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("23")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("24")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("25")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("26")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("27")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("28")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("29")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("30")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("31")])
+        ]
+      )
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "columns" }, [
       _c("div", { staticClass: "column planet-box" }, [
@@ -47469,12 +47448,17 @@ var render = function() {
           attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
         }),
         _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Direction: "),
-          _c("span", { staticClass: "direction" }, [
-            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mercury_direction))
-          ])
-        ]),
+        _c(
+          "p",
+          { staticClass: "info", staticStyle: { "text-align": "center" } },
+          [
+            _vm._v("Direction: "),
+            _c("br"),
+            _c("span", { staticClass: "direction" }, [
+              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mercury_direction))
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("p", { staticClass: "info" }, [
           _vm._v("Time of Event: "),
@@ -48057,8 +48041,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
   created: function created() {
+    // Get todays day of year number
     var day_of_year = this.getDOY();
 
+    // Fetch todays retrograde data
     this.fetchPlanets(day_of_year);
   },
 
@@ -48100,50 +48086,211 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return console.log(err);
       });
     },
+
+
+    // Get previous day data and update on button click
     subtractDay: function subtractDay() {
       console.log('sub');
       this.day_of_year -= 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
+
+
+    // Get next day data and update on button click
     addDay: function addDay() {
       console.log('add');
       this.day_of_year += 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
+
+
+    // Get day data from dropdown input on change
     updateDate: function updateDate() {
       var _this2 = this;
 
-      console.log(this.month + " " + this.day_of_month);
-
       var updatedDayOfMonth = this.day_of_month - 1;
-
-      // let filteredSelectedDay = this.allRetrogrades.filter(dailyRetrogrades => (dailyRetrogrades.month == this.month && dailyRetrogrades.day_of_month == this.day_of_month));
-
       var filteredSelectedMonth = this.allRetrogrades.filter(function (monthlyRetrogrades) {
         return monthlyRetrogrades.month == _this2.month;
       });
-
       var filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
-
       var selectedDayofYear = filteredSelectedDay.day_of_year;
 
+      // Update data object with filtered input data
       this.day_of_year = selectedDayofYear - 1;
-
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-      // let selectedDayNumber = filteredSelectedDay.day_of_month;
-
-      // console.log(selectedDayofYear);
-      // console.log(filteredSelectedMonth);
-
-      // if (this.month == this.allRetrogrades.month && this.day_of_month == this.allRetrogrades.day_of_month) {
-      //   console.log("Test Passed");
-      // }
     },
     testThingy: function testThingy() {
       console.log("Test Passed");
     }
   }
 });
+
+/***/ }),
+/* 51 */,
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(40)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(54)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Navbar.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-cadbadf2", Component.options)
+  } else {
+    hotAPI.reload("data-v-cadbadf2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(40)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(55)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Footer.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-083ff5dc", Component.options)
+  } else {
+    hotAPI.reload("data-v-083ff5dc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "nav" }, [
+      _c("div", { staticClass: "nav-title" }, [
+        _c("h1", [_vm._v("Retrograde Zone")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "nav-menu" }, [
+        _c("a", { attrs: { href: "/" } }, [_vm._v("Home")]),
+        _vm._v("   |\n    "),
+        _c("a", { attrs: { href: "/how-to" } }, [_vm._v("How To Use")]),
+        _vm._v("   |\n    "),
+        _c("a", { attrs: { href: "/about" } }, [_vm._v("About")]),
+        _vm._v("   |\n    "),
+        _c("a", { attrs: { href: "/api" } }, [_vm._v("API")])
+      ]),
+      _vm._v(" "),
+      _c("br")
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-cadbadf2", module.exports)
+  }
+}
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer" }, [
+      _c("p", [_vm._v("Footersdsds")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-083ff5dc", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

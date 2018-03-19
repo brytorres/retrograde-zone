@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
+  <div class="planets-section">
 
-    <div class="date-section" style="display: inline-block;">
-      <button v-on:click="subtractDay">Previous Day</button>
-      {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018 -- {{ todaysRetrogrades.day_of_year }}
+    <div class="date-section">
+      <button v-on:click="subtractDay">Prev Day</button>
+      {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
       <button v-on:click="addDay">Next Day</button>
-      <!-- <hr> -->
+      <hr>
+      <p class="date-info">Select Any 2018 Date:</p>
       <select v-model="month" v-on:change="updateDate">
         <option disabled value="">Select Month</option>
         <option>January</option>
@@ -55,14 +56,13 @@
         <option>30</option>
         <option>31</option>
       </select>
-      <span>Selected: {{ month }} {{ day_of_month }}</span>
     </div>
 
     <div class="columns">
       <div class="column planet-box">
         <h2 class="planet-name">Mercury</h2>
         <img src="http://via.placeholder.com/100x100" alt="">
-        <p class="info">Direction: <span class="direction"> {{ todaysRetrogrades.mercury_direction }}</span></p>
+        <p class="info" style="text-align:center;">Direction: <br><span class="direction"> {{ todaysRetrogrades.mercury_direction }}</span></p>
         <p class="info">Time of Event: <span class="time-true" v-if="todaysRetrogrades.mercury_time">{{ todaysRetrogrades.mercury_time }}</span><span class="time-false" v-else>No Event</span></p>
         <p class="info">Sign: <span class="sign-true" v-if="todaysRetrogrades.mercury_sign">{{ todaysRetrogrades.mercury_sign }}</span><span class="sign-false" v-else>No Event</span></p>
         <p class="info">Degrees: <span class="degrees-true" v-if="todaysRetrogrades.mercury_degrees">{{ todaysRetrogrades.mercury_degrees }}&deg; </span><span class="degrees-false" v-else>No Event</span></p>
@@ -166,8 +166,10 @@
     },
 
     created() {
+      // Get todays day of year number
       let day_of_year = this.getDOY();
       
+      // Fetch todays retrograde data
       this.fetchPlanets(day_of_year);
     },
 
@@ -204,43 +206,30 @@
           .catch(err => console.log(err));
       },
 
+      // Get previous day data and update on button click
       subtractDay() {
         console.log('sub');
         this.day_of_year -= 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       },
 
+      // Get next day data and update on button click
       addDay() {
         console.log('add');
         this.day_of_year += 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       },
 
+      // Get day data from dropdown input on change
       updateDate() {
-
-        console.log(this.month + " " + this.day_of_month);
-
         const updatedDayOfMonth = this.day_of_month - 1;
-
-        // let filteredSelectedDay = this.allRetrogrades.filter(dailyRetrogrades => (dailyRetrogrades.month == this.month && dailyRetrogrades.day_of_month == this.day_of_month));
-
         const filteredSelectedMonth = this.allRetrogrades.filter(monthlyRetrogrades => (monthlyRetrogrades.month == this.month));
-
         const filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
-
         let selectedDayofYear = filteredSelectedDay.day_of_year;
 
+        // Update data object with filtered input data
         this.day_of_year = selectedDayofYear - 1;
-        
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-        // let selectedDayNumber = filteredSelectedDay.day_of_month;
-
-        // console.log(selectedDayofYear);
-        // console.log(filteredSelectedMonth);
-
-        // if (this.month == this.allRetrogrades.month && this.day_of_month == this.allRetrogrades.day_of_month) {
-        //   console.log("Test Passed");
-        // }
       },
 
       testThingy() {
