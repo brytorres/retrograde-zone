@@ -13863,8 +13863,9 @@ module.exports = __webpack_require__(43);
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -47286,9 +47287,177 @@ var render = function() {
             _vm._s(_vm.todaysRetrogrades.month) +
             " " +
             _vm._s(_vm.todaysRetrogrades.day_of_month) +
-            ", 2018\n    "
+            ", 2018 -- " +
+            _vm._s(_vm.todaysRetrogrades.day_of_year) +
+            "\n    "
         ),
-        _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")])
+        _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.month,
+                expression: "month"
+              }
+            ],
+            on: {
+              change: [
+                function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.month = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                },
+                _vm.updateDate
+              ]
+            }
+          },
+          [
+            _c("option", { attrs: { disabled: "", value: "" } }, [
+              _vm._v("Select Month")
+            ]),
+            _vm._v(" "),
+            _c("option", [_vm._v("January")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("February")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("March")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("April")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("May")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("June")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("July")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("August")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("September")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("October")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("November")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("December")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.day_of_month,
+                expression: "day_of_month"
+              }
+            ],
+            on: {
+              change: [
+                function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.day_of_month = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                },
+                _vm.updateDate
+              ]
+            }
+          },
+          [
+            _c("option", { attrs: { disabled: "", value: "" } }, [
+              _vm._v("Select Day")
+            ]),
+            _vm._v(" "),
+            _c("option", [_vm._v("1")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("2")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("3")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("4")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("5")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("6")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("7")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("8")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("9")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("10")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("11")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("12")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("13")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("14")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("15")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("16")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("17")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("18")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("19")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("20")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("21")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("22")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("23")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("24")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("25")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("26")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("27")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("28")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("29")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("30")]),
+            _vm._v(" "),
+            _c("option", [_vm._v("31")])
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "Selected: " + _vm._s(_vm.month) + " " + _vm._s(_vm.day_of_month)
+          )
+        ])
       ]
     ),
     _vm._v(" "),
@@ -47815,13 +47984,67 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       allRetrogrades: [],
       todaysRetrogrades: [],
+      fullDate: '',
       day_of_year: 0,
+      month: 'January',
+      day_of_month: '1',
       retrograde: {
         day_of_year: '',
         planet_name: '',
@@ -47881,19 +48104,40 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       console.log('sub');
       this.day_of_year -= 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-
-      // fetch('api/planets')
-      //   .then(res => res.json())
-      //   .then(res => {
-      //     this.allRetrogrades = res.data;
-      //     this.todaysRetrogrades = this.allRetrogrades[day_of_year];
-      //   })
-      //   .catch(err => console.log(err));
     },
     addDay: function addDay() {
       console.log('add');
       this.day_of_year += 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+    },
+    updateDate: function updateDate() {
+      var _this2 = this;
+
+      console.log(this.month + " " + this.day_of_month);
+
+      var updatedDayOfMonth = this.day_of_month - 1;
+
+      // let filteredSelectedDay = this.allRetrogrades.filter(dailyRetrogrades => (dailyRetrogrades.month == this.month && dailyRetrogrades.day_of_month == this.day_of_month));
+
+      var filteredSelectedMonth = this.allRetrogrades.filter(function (monthlyRetrogrades) {
+        return monthlyRetrogrades.month == _this2.month;
+      });
+
+      var filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
+
+      var selectedDayofYear = filteredSelectedDay.day_of_year;
+
+      // let selectedDayNumber = filteredSelectedDay.day_of_month;
+
+      console.log(selectedDayofYear);
+      // console.log(filteredSelectedMonth);
+
+      // if (this.month == this.allRetrogrades.month && this.day_of_month == this.allRetrogrades.day_of_month) {
+      //   console.log("Test Passed");
+      // }
+    },
+    testThingy: function testThingy() {
+      console.log("Test Passed");
     }
   }
 });

@@ -3,8 +3,59 @@
 
     <div class="date-section" style="display: inline-block;">
       <button v-on:click="subtractDay">Previous Day</button>
-      {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
+      {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018 -- {{ todaysRetrogrades.day_of_year }}
       <button v-on:click="addDay">Next Day</button>
+      <!-- <hr> -->
+      <select v-model="month" v-on:change="updateDate">
+        <option disabled value="">Select Month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      <select v-model="day_of_month" v-on:change="updateDate">
+        <option disabled value="">Select Day</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+      </select>
+      <span>Selected: {{ month }} {{ day_of_month }}</span>
     </div>
 
     <div class="columns">
@@ -98,7 +149,10 @@
       return {
         allRetrogrades: [],
         todaysRetrogrades: [],
+        fullDate: '',
         day_of_year: 0,
+        month: 'January',
+        day_of_month: '1',
         retrograde: {
           day_of_year: '',
           planet_name: '',
@@ -154,20 +208,42 @@
         console.log('sub');
         this.day_of_year -= 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-      
-        // fetch('api/planets')
-        //   .then(res => res.json())
-        //   .then(res => {
-        //     this.allRetrogrades = res.data;
-        //     this.todaysRetrogrades = this.allRetrogrades[day_of_year];
-        //   })
-        //   .catch(err => console.log(err));
       },
 
       addDay() {
         console.log('add');
         this.day_of_year += 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+      },
+
+      updateDate() {
+
+        console.log(this.month + " " + this.day_of_month);
+
+        const updatedDayOfMonth = this.day_of_month - 1;
+
+        // let filteredSelectedDay = this.allRetrogrades.filter(dailyRetrogrades => (dailyRetrogrades.month == this.month && dailyRetrogrades.day_of_month == this.day_of_month));
+
+        const filteredSelectedMonth = this.allRetrogrades.filter(monthlyRetrogrades => (monthlyRetrogrades.month == this.month));
+
+        const filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
+
+        let selectedDayofYear = filteredSelectedDay.day_of_year;
+
+
+
+        // let selectedDayNumber = filteredSelectedDay.day_of_month;
+
+        console.log(selectedDayofYear);
+        // console.log(filteredSelectedMonth);
+
+        // if (this.month == this.allRetrogrades.month && this.day_of_month == this.allRetrogrades.day_of_month) {
+        //   console.log("Test Passed");
+        // }
+      },
+
+      testThingy() {
+        console.log("Test Passed");
       }
     }
   }
