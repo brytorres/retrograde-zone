@@ -7,6 +7,7 @@
       <button v-on:click="addDay">Next Day</button>
       <hr>
       <p class="date-info">Select Any 2018 Date:</p>
+
       <select v-model="month" v-on:change="updateDate">
         <option disabled value="">Select Month</option>
         <option>January</option>
@@ -56,6 +57,7 @@
         <option>30</option>
         <option>31</option>
       </select>
+      
     </div>
 
     <div class="columns">

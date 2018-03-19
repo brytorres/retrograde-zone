@@ -1922,14 +1922,21 @@ p {
 }
 
 .nav-title h1 {
-  color: blue;
+  color: white;
   margin: 0px;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .nav-subtitle {
   margin-top: 5px;
   margin-bottom: 5px;
+  color: #d2d2d2;
   font-size: 14px;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .nav-menu {
@@ -1938,6 +1945,20 @@ p {
   text-align: right;
   width: 50%;
   display: inline-block;
+  color: #d2d2d2;
+  font-size: 14px;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-menu a {
+  color: #d2d2d2;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #794bf7;
 }
 
 .planets-section {
@@ -1946,7 +1967,22 @@ p {
 
 .date-section {
   text-align: center;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 30px 0px;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.date-section button {
+  background: none;
+  color: #c4c4c4;
+  border: 1px #6d6d6d solid;
+  border-radius: 0px;
+  padding: 5px 10px 5px 10px;
+  margin: 0px 10px 0px 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .date-info {
@@ -1954,12 +1990,12 @@ p {
   margin-bottom: 5px;
 }
 
-.planet-name {
-  color: red;
+hr {
+  width: 40%;
 }
 
 .planet-box {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   margin: 5px;
 }
 
@@ -1977,12 +2013,18 @@ p {
 .planet-name {
   text-align: center;
   margin: 10px 0px 10px 0px;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .info {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
+  font-family: "Assistant", sans-serif;
+  font-weight: 500;
 }
 
 .direction-title {
@@ -1991,8 +2033,9 @@ p {
 
 .direction {
   text-align: center;
-  color: blue;
   margin-top: 10px;
+  font-size: 14px;
+  color: #c4c4c4;
 }
 
 .time-true {
@@ -2001,6 +2044,7 @@ p {
 
 .time-false {
   float: right;
+  color: #6e6e6e;
 }
 
 .sign-true {
@@ -2009,6 +2053,7 @@ p {
 
 .sign-false {
   float: right;
+  color: #6e6e6e;
 }
 
 .degrees-true {
@@ -2017,6 +2062,7 @@ p {
 
 .degrees-false {
   float: right;
+  color: #6e6e6e;
 }
 
 .minutes-true {
@@ -2025,10 +2071,14 @@ p {
 
 .minutes-false {
   float: right;
+  color: #6e6e6e;
 }
 
 .footer {
   margin-top: 40px;
   text-align: center;
+  font-family: "Assistant", sans-serif;
+  font-weight: 500;
+  color: #6e6e6e;
 }
 

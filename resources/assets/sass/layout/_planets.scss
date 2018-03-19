@@ -4,7 +4,22 @@
 
 .date-section {
   text-align: center;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 30px 0px;
+  font-family: $assistant;
+  font-weight: 400;
+  font-size: 18px;
+
+  button {
+    background: none;
+    color: rgb(196, 196, 196);
+    border: 1px rgb(109, 109, 109) solid;
+    border-radius: 0px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 10px 0px 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
 }
 
 .date-info {
@@ -12,12 +27,12 @@
   margin-bottom: 5px;
 }
 
-.planet-name {
-  color: red;
+hr {
+  width: 40%;
 }
 
 .planet-box {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1); 
   margin: 5px;
 }
 
@@ -35,12 +50,18 @@
 .planet-name {
   text-align: center;
   margin: 10px 0px 10px 0px;
+  font-family: $miriam;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .info {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
+  font-family: $assistant;
+  font-weight: 500;
 }
 
 .direction-title {
@@ -49,8 +70,9 @@
 
 .direction {
   text-align: center;
-  color: blue;
   margin-top: 10px;
+  font-size: 14px;
+  color: rgb(196, 196, 196);
 }
 
 .time-true {
@@ -58,7 +80,8 @@
 }
 
 .time-false {
-  float: right;  
+  float: right;
+  color: rgb(110,110,110);  
 }
 
 .sign-true {
@@ -66,7 +89,8 @@
 }
 
 .sign-false {
-  float: right;  
+  float: right;
+  color: rgb(110,110,110);  
 }
 
 .degrees-true {
@@ -74,7 +98,8 @@
 }
 
 .degrees-false {
-  float: right;  
+  float: right;
+  color: rgb(110,110,110);  
 }
 
 .minutes-true {
@@ -82,5 +107,6 @@
 }
 
 .minutes-false {
-  float: right;  
+  float: right;
+  color: rgb(110,110,110);  
 }

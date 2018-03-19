@@ -9,14 +9,21 @@
 }
 
 .nav-title h1{
-  color: blue;
+  color: white;
   margin: 0px;
+  font-family: $miriam;
+  font-weight: 700;
+  text-transform: uppercase;  
 }
 
 .nav-subtitle {
   margin-top: 5px;
   margin-bottom: 5px;
+  color: rgb(210,210,210);
   font-size: 14px;
+  font-family: $miriam;
+  font-weight: 500;
+  text-transform: uppercase; 
 }
 
 .nav-menu {
@@ -25,4 +32,18 @@
   text-align: right;
   width: 50%;
   display: inline-block;
+  color: rgb(210,210,210);
+  font-size: 14px;
+  font-family: $miriam;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  a {
+    color: rgb(210,210,210);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(121, 75, 247);
+  }
 }
