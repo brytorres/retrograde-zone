@@ -29,6 +29,10 @@
 
 hr {
   width: 40%;
+  height: 1px;
+  color: $grey;
+  background-color: $grey;
+  border: none;
 }
 
 .planet-box {
@@ -45,6 +49,7 @@ hr {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
+  border-radius: 50%;
 }
 
 .planet-name {
@@ -54,6 +59,7 @@ hr {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: $peach;
 }
 
 .info {

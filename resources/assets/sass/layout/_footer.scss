@@ -4,4 +4,14 @@
   font-family: $assistant;
   font-weight: 500;
   color: rgb(110,110,110);
+  font-size: 12px;
+  
+  a {
+    color: rgb(210,210,210);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(121, 75, 247);
+  }
 }
