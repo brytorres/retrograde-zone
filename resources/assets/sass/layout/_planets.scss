@@ -29,17 +29,58 @@
 .planet-box img {
   margin: 0 auto;
   display: block;
+  padding: 0px 0px 5px 0px;
 }
 
 .planet-name {
   text-align: center;
+  margin: 10px 0px 10px 0px;
 }
 
 .info {
   font-size: 12px;
-  line-height: 10px;
+  line-height: 18px;
+  margin: 0;
+}
+
+.direction-title {
+  margin: 10px 0px 10px 0px;
 }
 
 .direction {
+  text-align: center;
   color: blue;
+  margin-top: 10px;
+}
+
+.time-true {
+  float: right;
+}
+
+.time-false {
+  float: right;  
+}
+
+.sign-true {
+  float: right;
+}
+
+.sign-false {
+  float: right;  
+}
+
+.degrees-true {
+  float: right;
+}
+
+.degrees-false {
+  float: right;  
+}
+
+.minutes-true {
+  float: right;
+}
+
+.minutes-false {
+  float: right;  
 }

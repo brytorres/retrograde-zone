@@ -47456,9 +47456,14 @@ var render = function() {
           _vm._v(" "),
           _c(
             "p",
-            { staticClass: "info", staticStyle: { "text-align": "center" } },
+            {
+              staticClass: "info",
+              staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+            },
             [
-              _vm._v("Direction: "),
+              _c("span", { staticClass: "direction-title" }, [
+                _vm._v("Direction: ")
+              ]),
               _c("br"),
               _c("span", { staticClass: "direction" }, [
                 _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mercury_direction))
@@ -47515,12 +47520,22 @@ var render = function() {
           attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
         }),
         _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Direction: "),
-          _c("span", { staticClass: "direction" }, [
-            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.venus_direction))
-          ])
-        ]),
+        _c(
+          "p",
+          {
+            staticClass: "info",
+            staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+          },
+          [
+            _c("span", { staticClass: "direction-title" }, [
+              _vm._v("Direction: ")
+            ]),
+            _c("br"),
+            _c("span", { staticClass: "direction" }, [
+              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.venus_direction))
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("p", { staticClass: "info" }, [
           _vm._v("Time of Event: "),
@@ -47566,12 +47581,22 @@ var render = function() {
           attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
         }),
         _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Direction: "),
-          _c("span", { staticClass: "direction" }, [
-            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mars_direction))
-          ])
-        ]),
+        _c(
+          "p",
+          {
+            staticClass: "info",
+            staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+          },
+          [
+            _c("span", { staticClass: "direction-title" }, [
+              _vm._v("Direction: ")
+            ]),
+            _c("br"),
+            _c("span", { staticClass: "direction" }, [
+              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.mars_direction))
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("p", { staticClass: "info" }, [
           _vm._v("Time of Event: "),
@@ -47623,12 +47648,22 @@ var render = function() {
             attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
           }),
           _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Direction: "),
-            _c("span", { staticClass: "direction" }, [
-              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.jupiter_direction))
-            ])
-          ]),
+          _c(
+            "p",
+            {
+              staticClass: "info",
+              staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+            },
+            [
+              _c("span", { staticClass: "direction-title" }, [
+                _vm._v("Direction: ")
+              ]),
+              _c("br"),
+              _c("span", { staticClass: "direction" }, [
+                _vm._v(" " + _vm._s(_vm.todaysRetrogrades.jupiter_direction))
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c("p", { staticClass: "info" }, [
             _vm._v("Time of Event: "),
@@ -47687,12 +47722,22 @@ var render = function() {
             attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
           }),
           _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Direction: "),
-            _c("span", { staticClass: "direction" }, [
-              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.saturn_direction))
-            ])
-          ]),
+          _c(
+            "p",
+            {
+              staticClass: "info",
+              staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+            },
+            [
+              _c("span", { staticClass: "direction-title" }, [
+                _vm._v("Direction: ")
+              ]),
+              _c("br"),
+              _c("span", { staticClass: "direction" }, [
+                _vm._v(" " + _vm._s(_vm.todaysRetrogrades.saturn_direction))
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c("p", { staticClass: "info" }, [
             _vm._v("Time of Event: "),
@@ -47743,12 +47788,22 @@ var render = function() {
           attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
         }),
         _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Direction: "),
-          _c("span", { staticClass: "direction" }, [
-            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.uranus_direction))
-          ])
-        ]),
+        _c(
+          "p",
+          {
+            staticClass: "info",
+            staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+          },
+          [
+            _c("span", { staticClass: "direction-title" }, [
+              _vm._v("Direction: ")
+            ]),
+            _c("br"),
+            _c("span", { staticClass: "direction" }, [
+              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.uranus_direction))
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("p", { staticClass: "info" }, [
           _vm._v("Time of Event: "),
@@ -47794,12 +47849,22 @@ var render = function() {
           attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
         }),
         _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Direction: "),
-          _c("span", { staticClass: "direction" }, [
-            _vm._v(" " + _vm._s(_vm.todaysRetrogrades.neptune_direction))
-          ])
-        ]),
+        _c(
+          "p",
+          {
+            staticClass: "info",
+            staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+          },
+          [
+            _c("span", { staticClass: "direction-title" }, [
+              _vm._v("Direction: ")
+            ]),
+            _c("br"),
+            _c("span", { staticClass: "direction" }, [
+              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.neptune_direction))
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("p", { staticClass: "info" }, [
           _vm._v("Time of Event: "),
@@ -47851,12 +47916,22 @@ var render = function() {
             attrs: { src: "http://via.placeholder.com/100x100", alt: "" }
           }),
           _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Direction: "),
-            _c("span", { staticClass: "direction" }, [
-              _vm._v(" " + _vm._s(_vm.todaysRetrogrades.pluto_direction))
-            ])
-          ]),
+          _c(
+            "p",
+            {
+              staticClass: "info",
+              staticStyle: { "text-align": "center", "padding-bottom": "10px" }
+            },
+            [
+              _c("span", { staticClass: "direction-title" }, [
+                _vm._v("Direction: ")
+              ]),
+              _c("br"),
+              _c("span", { staticClass: "direction" }, [
+                _vm._v(" " + _vm._s(_vm.todaysRetrogrades.pluto_direction))
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c("p", { staticClass: "info" }, [
             _vm._v("Time of Event: "),
@@ -48071,8 +48146,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       todaysRetrogrades: [],
       fullDate: '',
       day_of_year: 0,
-      month: 'January',
-      day_of_month: '1',
+      month: '',
+      day_of_month: '',
       retrograde: {
         day_of_year: '',
         planet_name: '',
@@ -48281,16 +48356,20 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "nav" }, [
       _c("div", { staticClass: "nav-title" }, [
-        _c("h1", [_vm._v("Retrograde Zone")])
+        _c("h1", [_vm._v("Retrograde Zone")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "nav-subtitle" }, [
+          _vm._v("What's In Retrograde?")
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "nav-menu" }, [
         _c("a", { attrs: { href: "/" } }, [_vm._v("Home")]),
-        _vm._v("   |\n    "),
+        _vm._v(" |\n    "),
         _c("a", { attrs: { href: "/how-to" } }, [_vm._v("How To Use")]),
-        _vm._v("   |\n    "),
+        _vm._v(" |\n    "),
         _c("a", { attrs: { href: "/about" } }, [_vm._v("About")]),
-        _vm._v("   |\n    "),
+        _vm._v(" |\n    "),
         _c("a", { attrs: { href: "/api" } }, [_vm._v("API")])
       ]),
       _vm._v(" "),
@@ -48323,7 +48402,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "footer" }, [
-      _c("p", [_vm._v("Footersdsds")])
+      _c("p", [_vm._v(" Retrograde.Zone © Bryan Torres 2018")])
     ])
   }
 ]

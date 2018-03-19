@@ -2,11 +2,12 @@
   <div class="nav">
     <div class="nav-title">
       <h1>Retrograde Zone</h1>
+      <p class="nav-subtitle">What's In Retrograde?</p>
     </div>
     <div class="nav-menu">
-      <a href="/">Home</a> &nbsp; |
-      <a href="/how-to">How To Use</a> &nbsp; |
-      <a href="/about">About</a> &nbsp; |
+      <a href="/">Home</a>&nbsp;|
+      <a href="/how-to">How To Use</a>&nbsp;|
+      <a href="/about">About</a>&nbsp;|
       <a href="/api">API</a>
     </div> 
     <br>
