@@ -47546,16 +47546,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       fullDate: '',
       day_of_year: 0,
       month: '',
-      day_of_month: '',
-      retrograde: {
-        day_of_year: '',
-        planet_name: '',
-        planet_direction: '',
-        planet_sign: '',
-        planet_time: '',
-        planet_degrees: '',
-        planet_minutes: ''
-      }
+      day_of_month: 1,
+      short_months: ['February', 'April', 'June', 'September', 'November'],
+      prev_selected_months: []
     };
   },
   created: function created() {
@@ -47600,6 +47593,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }).then(function (res) {
         _this.allRetrogrades = res.data;
         _this.todaysRetrogrades = _this.allRetrogrades[day_of_year];
+        _this.prev_selected_months.push(_this.todaysRetrogrades.month);
       }).catch(function (err) {
         return console.log(err);
       });
@@ -47608,7 +47602,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     // Get previous day data and update on button click
     subtractDay: function subtractDay() {
-      console.log('sub');
       this.day_of_year -= 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
@@ -47616,7 +47609,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     // Get next day data and update on button click
     addDay: function addDay() {
-      console.log('add');
       this.day_of_year += 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
@@ -47626,17 +47618,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     updateDate: function updateDate() {
       var _this2 = this;
 
-      var updatedDayOfMonth = this.day_of_month - 1;
-      var filteredSelectedMonth = this.allRetrogrades.filter(function (monthlyRetrogrades) {
-        return monthlyRetrogrades.month == _this2.month;
-      });
-      var filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
-      var selectedDayofYear = filteredSelectedDay.day_of_year;
+      try {
+        var updatedDayOfMonth = this.day_of_month - 1;
+        var filteredSelectedMonth = this.allRetrogrades.filter(function (monthlyRetrogrades) {
+          return monthlyRetrogrades.month == _this2.month;
+        });
+        var filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
+        var selectedDayofYear = filteredSelectedDay.day_of_year;
 
-      // Update data object with filtered input data
-      this.day_of_year = selectedDayofYear - 1;
-      this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+        // Update data object with filtered input data
+        this.day_of_year = selectedDayofYear - 1;
+        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+      } catch (e) {
+
+        // Catch Error created by selecting month and day in the dropdown with less days than previosly selected month and day
+        // e.g., Selecting the November after having selected December 31st. November only has 30 days. 
+        if (e.name == 'TypeError') {
+          if (this.month !== 'February') {
+            this.day_of_month = 30;
+          } else {
+            this.day_of_month = 28;
+          }
+        }
+      }
     },
+
+
+    // Get todays data
     getToday: function getToday() {
       // Get todays day of year number
       var day_of_year = this.getDOY();
@@ -48413,11 +48421,13 @@ var render = function() {
           _vm._v(" "),
           _c("option", [_vm._v("28")]),
           _vm._v(" "),
-          _c("option", [_vm._v("29")]),
+          this.month !== "February" ? _c("option", [_vm._v("29")]) : _vm._e(),
           _vm._v(" "),
-          _c("option", [_vm._v("30")]),
+          this.month !== "February" ? _c("option", [_vm._v("30")]) : _vm._e(),
           _vm._v(" "),
-          _c("option", [_vm._v("31")])
+          !_vm.short_months.includes(this.month)
+            ? _c("option", [_vm._v("31")])
+            : _vm._e()
         ]
       )
     ])

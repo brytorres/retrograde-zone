@@ -279,9 +279,9 @@
           <option>26</option>
           <option>27</option>
           <option>28</option>
-          <option>29</option>
-          <option>30</option>
-          <option>31</option>
+          <option v-if="this.month !== 'February'">29</option>
+          <option v-if="this.month !== 'February'">30</option>
+          <option v-if="!short_months.includes(this.month)">31</option>
         </select>
     </div>
   
@@ -297,16 +297,9 @@
         fullDate: '',
         day_of_year: 0,
         month: '',
-        day_of_month: '',
-        retrograde: {
-          day_of_year: '',
-          planet_name: '',
-          planet_direction: '',
-          planet_sign: '',
-          planet_time: '',
-          planet_degrees: '',
-          planet_minutes: '',
-        }
+        day_of_month: 1,
+        short_months: ['February', 'April', 'June', 'September', 'November'],
+        prev_selected_months: [],
       }
     },
   
@@ -347,36 +340,50 @@
           .then(res => {
             this.allRetrogrades = res.data;
             this.todaysRetrogrades = this.allRetrogrades[day_of_year];
+            this.prev_selected_months.push(this.todaysRetrogrades.month);
           })
           .catch(err => console.log(err));
       },
   
       // Get previous day data and update on button click
       subtractDay() {
-        console.log('sub');
         this.day_of_year -= 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       },
   
       // Get next day data and update on button click
       addDay() {
-        console.log('add');
         this.day_of_year += 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       },
   
       // Get day data from dropdown input on change
       updateDate() {
-        const updatedDayOfMonth = this.day_of_month - 1;
-        const filteredSelectedMonth = this.allRetrogrades.filter(monthlyRetrogrades => (monthlyRetrogrades.month == this.month));
-        const filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
-        let selectedDayofYear = filteredSelectedDay.day_of_year;
+        try {
+          const updatedDayOfMonth = this.day_of_month - 1;
+          const filteredSelectedMonth = this.allRetrogrades.filter(monthlyRetrogrades => (monthlyRetrogrades.month == this.month));
+          const filteredSelectedDay = filteredSelectedMonth[updatedDayOfMonth];
+          let selectedDayofYear = filteredSelectedDay.day_of_year;
   
-        // Update data object with filtered input data
-        this.day_of_year = selectedDayofYear - 1;
-        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+          // Update data object with filtered input data
+          this.day_of_year = selectedDayofYear - 1;
+          this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+        } catch (e) {
+    
+          // Catch Error created by selecting month and day in the dropdown with less days than previosly selected month and day
+          // e.g., Selecting the November after having selected December 31st. November only has 30 days. 
+          if (e.name == 'TypeError') {
+            if (this.month !== 'February') {
+              this.day_of_month = 30;
+            } else {
+              this.day_of_month = 28
+            }
+          }
+        }
+        
       },
 
+      // Get todays data
       getToday() {
         // Get todays day of year number
         let day_of_year = this.getDOY();
