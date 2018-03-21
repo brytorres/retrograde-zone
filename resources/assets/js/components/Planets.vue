@@ -229,8 +229,8 @@
     </div>
   
     <div class="date-section">
-      <button v-on:click="subtractDay">Prev Day</button> {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
-      <button v-on:click="addDay">Next Day</button><br>
+      <button v-on:click="subtractDay" :disabled="prevIsDisabled">Prev Day</button> {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
+      <button v-on:click="addDay" :disabled="nextIsDisabled">Next Day</button><br>
       <button v-on:click="getToday">Today</button>
       <hr>
       <p class="date-info">Select Any 2018 Date:</p>
@@ -300,6 +300,8 @@
         day_of_month: 1,
         short_months: ['February', 'April', 'June', 'September', 'November'],
         prev_selected_months: [],
+        prevIsDisabled: false,
+        nextIsDisabled: false
       }
     },
   
@@ -347,14 +349,33 @@
   
       // Get previous day data and update on button click
       subtractDay() {
+        if (this.day_of_year == 1) {
+          this.prevIsDisabled = true;
+          alert('Our records only contain 2018 data.');
+        } else {
+          this.prevIsDisabled = false;
+          this.nextIsDisabled = false;
+        }
+        
+
         this.day_of_year -= 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       },
   
       // Get next day data and update on button click
       addDay() {
+        if (this.day_of_year == 364) {
+          this.nextIsDisabled = true;
+          alert('Our records only contain 2018 data.')
+        } else {
+          this.nextIsDisabled = false;
+          this.prevIsDisabled = false;
+        }
+        console.log(this.nextIsDisabled);
+
         this.day_of_year += 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+        console.log(this.day_of_year);
       },
   
       // Get day data from dropdown input on change
@@ -368,6 +389,7 @@
           // Update data object with filtered input data
           this.day_of_year = selectedDayofYear - 1;
           this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+          
         } catch (e) {
     
           // Catch Error created by selecting month and day in the dropdown with less days than previosly selected month and day

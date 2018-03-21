@@ -47548,7 +47548,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       month: '',
       day_of_month: 1,
       short_months: ['February', 'April', 'June', 'September', 'November'],
-      prev_selected_months: []
+      prev_selected_months: [],
+      prevIsDisabled: false,
+      nextIsDisabled: false
     };
   },
   created: function created() {
@@ -47602,6 +47604,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     // Get previous day data and update on button click
     subtractDay: function subtractDay() {
+      if (this.day_of_year == 1) {
+        this.prevIsDisabled = true;
+        alert('Our records only contain 2018 data.');
+      } else {
+        this.prevIsDisabled = false;
+        this.nextIsDisabled = false;
+      }
+
       this.day_of_year -= 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
@@ -47609,8 +47619,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     // Get next day data and update on button click
     addDay: function addDay() {
+      if (this.day_of_year == 364) {
+        this.nextIsDisabled = true;
+        alert('Our records only contain 2018 data.');
+      } else {
+        this.nextIsDisabled = false;
+        this.prevIsDisabled = false;
+      }
+      console.log(this.nextIsDisabled);
+
       this.day_of_year += 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+      console.log(this.day_of_year);
     },
 
 
@@ -48252,7 +48272,14 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "date-section" }, [
-      _c("button", { on: { click: _vm.subtractDay } }, [_vm._v("Prev Day")]),
+      _c(
+        "button",
+        {
+          attrs: { disabled: _vm.prevIsDisabled },
+          on: { click: _vm.subtractDay }
+        },
+        [_vm._v("Prev Day")]
+      ),
       _vm._v(
         " " +
           _vm._s(_vm.todaysRetrogrades.month) +
@@ -48260,7 +48287,11 @@ var render = function() {
           _vm._s(_vm.todaysRetrogrades.day_of_month) +
           ", 2018\n    "
       ),
-      _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
+      _c(
+        "button",
+        { attrs: { disabled: _vm.nextIsDisabled }, on: { click: _vm.addDay } },
+        [_vm._v("Next Day")]
+      ),
       _c("br"),
       _vm._v(" "),
       _c("button", { on: { click: _vm.getToday } }, [_vm._v("Today")]),
