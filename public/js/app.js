@@ -47626,11 +47626,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.nextIsDisabled = false;
         this.prevIsDisabled = false;
       }
-      console.log(this.nextIsDisabled);
 
       this.day_of_year += 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-      console.log(this.day_of_year);
     },
 
 
@@ -47650,7 +47648,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.day_of_year = selectedDayofYear - 1;
         this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
       } catch (e) {
-
         // Catch Error created by selecting month and day in the dropdown with less days than previosly selected month and day
         // e.g., Selecting the November after having selected December 31st. November only has 30 days. 
         if (e.name == 'TypeError') {
