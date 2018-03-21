@@ -1,5 +1,5 @@
 .planets-section {
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 .date-section {
@@ -20,6 +20,18 @@
     font-size: 10px;
     letter-spacing: 1px;
   }
+
+  button:hover {
+    background: rgba(226, 133, 110, 0.205);
+    color: white;
+    border: 1px rgb(170, 170, 170) solid;
+  }
+
+  button:active {
+    background: rgba(228, 154, 136, 0.699);
+    color: white;
+    border: 1px rgb(216, 216, 216) solid;
+  }
 }
 
 .date-info {
@@ -38,6 +50,7 @@ hr {
 .planet-box {
   background: rgba(255,255,255,0.1); 
   margin: 5px;
+  height: 280px;
 }
 
 .planet-box:hover {
@@ -49,11 +62,16 @@ hr {
     margin-right: 0;
 }
 
+.column {
+  position: relative;
+}
+
 .planet-box img {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
   border-radius: 50%;
+  position: relative;
 }
 
 .planet-name {
@@ -64,6 +82,13 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: $peach;
+}
+
+.info-section {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 92%;
 }
 
 .info {

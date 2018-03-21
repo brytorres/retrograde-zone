@@ -1917,6 +1917,25 @@ p {
   line-height: 10px;
 }
 
+.error-404 {
+  display: block;
+  margin: 0 auto;
+  background-image: url("/../img/404.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+}
+
+.error-404 h1 {
+  font-family: "Assistant", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  top: 48%;
+}
+
 .nav {
   margin: 20px 0px 40px 0px;
 }
@@ -1964,10 +1983,15 @@ p {
 
 .nav-menu a:hover {
   color: #794bf7;
+  border-bottom: 3px solid #794bf7;
+}
+
+.seperator {
+  color: #e2856e;
 }
 
 .planets-section {
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 .date-section {
@@ -1990,6 +2014,18 @@ p {
   letter-spacing: 1px;
 }
 
+.date-section button:hover {
+  background: rgba(226, 133, 110, 0.205);
+  color: white;
+  border: 1px #aaaaaa solid;
+}
+
+.date-section button:active {
+  background: rgba(228, 154, 136, 0.699);
+  color: white;
+  border: 1px #d8d8d8 solid;
+}
+
 .date-info {
   font-size: 12px;
   margin-bottom: 5px;
@@ -2006,6 +2042,7 @@ hr {
 .planet-box {
   background: rgba(255, 255, 255, 0.1);
   margin: 5px;
+  height: 280px;
 }
 
 .planet-box:hover {
@@ -2017,11 +2054,16 @@ hr {
   margin-right: 0;
 }
 
+.column {
+  position: relative;
+}
+
 .planet-box img {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
   border-radius: 50%;
+  position: relative;
 }
 
 .planet-name {
@@ -2032,6 +2074,13 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #e2856e;
+}
+
+.info-section {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 92%;
 }
 
 .info {
@@ -2093,7 +2142,10 @@ hr {
 }
 
 .footer {
-  margin-top: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   font-family: "Assistant", sans-serif;
   font-weight: 500;

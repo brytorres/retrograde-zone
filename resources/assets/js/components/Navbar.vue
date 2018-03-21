@@ -5,9 +5,9 @@
       <p class="nav-subtitle">What's In Retrograde?</p>
     </div>
     <div class="nav-menu">
-      <a href="/">Home</a>&nbsp;|
-      <a href="/how-to">How To Use</a>&nbsp;|
-      <a href="/about">About</a>&nbsp;|
+      <a href="/">Home</a>&nbsp;<span class="seperator">|</span>
+      <a href="/how-to">How To Use</a>&nbsp;<span class="seperator">|</span>
+      <a href="/about">About</a>&nbsp;<span class="seperator">|</span>
       <a href="/api">API</a>
     </div> 
     <br>

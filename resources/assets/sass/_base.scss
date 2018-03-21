@@ -17,3 +17,22 @@ p {
   line-height: 10px;
 }
 
+.error-404 {
+  display:block;
+  margin: 0 auto;
+  background-image: url("/../img/404.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+
+  h1 {
+    font-family: $assistant;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    top: 48%;
+    // right: 50%;
+  }
+}

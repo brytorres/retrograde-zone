@@ -47527,6 +47527,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -47627,6 +47637,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.day_of_year = selectedDayofYear - 1;
       this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
     },
+    getToday: function getToday() {
+      // Get todays day of year number
+      var day_of_year = this.getDOY();
+
+      // Fetch todays retrograde data
+      this.fetchPlanets(day_of_year);
+    },
     testThingy: function testThingy() {
       console.log("Test Passed");
     }
@@ -47673,48 +47690,50 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm.todaysRetrogrades.mercury_direction !== "Stationary Retrograde"
-            ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-            : _vm._e(),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Time of Event:\n        "),
-            _vm.todaysRetrogrades.mercury_time
-              ? _c("span", { staticClass: "time-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_time))
-                ])
-              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Sign: \n        "),
-            _vm.todaysRetrogrades.mercury_sign
-              ? _c("span", { staticClass: "sign-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_sign))
-                ])
-              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Degrees: \n        "),
-            _vm.todaysRetrogrades.mercury_degrees
-              ? _c("span", { staticClass: "degrees-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_degrees) + "° ")
-                ])
-              : _c("span", { staticClass: "degrees-false" }, [
-                  _vm._v("No Event")
-                ])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Minutes: \n        "),
-            _vm.todaysRetrogrades.mercury_minutes
-              ? _c("span", { staticClass: "minutes-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_minutes) + "'")
-                ])
-              : _c("span", { staticClass: "minutes-false" }, [
-                  _vm._v("No Event")
-                ])
+          _c("div", { staticClass: "info-section" }, [
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Time of Event:\n          "),
+              _vm.todaysRetrogrades.mercury_time
+                ? _c("span", { staticClass: "time-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_time))
+                  ])
+                : _c("span", { staticClass: "time-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Sign: \n          "),
+              _vm.todaysRetrogrades.mercury_sign
+                ? _c("span", { staticClass: "sign-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_sign))
+                  ])
+                : _c("span", { staticClass: "sign-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Degrees: \n          "),
+              _vm.todaysRetrogrades.mercury_degrees
+                ? _c("span", { staticClass: "degrees-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_degrees) + "° ")
+                  ])
+                : _c("span", { staticClass: "degrees-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Minutes: \n          "),
+              _vm.todaysRetrogrades.mercury_minutes
+                ? _c("span", { staticClass: "minutes-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.mercury_minutes) + "'")
+                  ])
+                : _c("span", { staticClass: "minutes-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ])
           ])
         ]
       ),
@@ -47743,44 +47762,46 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm.todaysRetrogrades.venus_direction !== "Stationary Retrograde"
-          ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-          : _vm._e(),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Time of Event: \n        "),
-          _vm.todaysRetrogrades.venus_time
-            ? _c("span", { staticClass: "time-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_time))
-              ])
-            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Sign: \n        "),
-          _vm.todaysRetrogrades.venus_sign
-            ? _c("span", { staticClass: "sign-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_sign))
-              ])
-            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Degrees: \n        "),
-          _vm.todaysRetrogrades.venus_degrees
-            ? _c("span", { staticClass: "degrees-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_degrees))
-              ])
-            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Minutes: \n        "),
-          _vm.todaysRetrogrades.venus_minutes
-            ? _c("span", { staticClass: "minutes-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.venus_minutes))
-              ])
-            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        _c("div", { staticClass: "info-section" }, [
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Time of Event: \n          "),
+            _vm.todaysRetrogrades.venus_time
+              ? _c("span", { staticClass: "time-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.venus_time))
+                ])
+              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Sign: \n          "),
+            _vm.todaysRetrogrades.venus_sign
+              ? _c("span", { staticClass: "sign-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.venus_sign))
+                ])
+              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Degrees: \n          "),
+            _vm.todaysRetrogrades.venus_degrees
+              ? _c("span", { staticClass: "degrees-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.venus_degrees))
+                ])
+              : _c("span", { staticClass: "degrees-false" }, [
+                  _vm._v("No Event")
+                ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Minutes: \n          "),
+            _vm.todaysRetrogrades.venus_minutes
+              ? _c("span", { staticClass: "minutes-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.venus_minutes))
+                ])
+              : _c("span", { staticClass: "minutes-false" }, [
+                  _vm._v("No Event")
+                ])
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -47808,44 +47829,46 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm.todaysRetrogrades.mars_direction !== "Stationary Retrograde"
-          ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-          : _vm._e(),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Time of Event: \n        "),
-          _vm.todaysRetrogrades.mars_time
-            ? _c("span", { staticClass: "time-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_time))
-              ])
-            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Sign: \n        "),
-          _vm.todaysRetrogrades.mars_sign
-            ? _c("span", { staticClass: "sign-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_sign))
-              ])
-            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Degrees: \n        "),
-          _vm.todaysRetrogrades.mars_degrees
-            ? _c("span", { staticClass: "degrees-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_degrees))
-              ])
-            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Minutes: \n        "),
-          _vm.todaysRetrogrades.mars_minutes
-            ? _c("span", { staticClass: "minutes-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.mars_minutes))
-              ])
-            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        _c("div", { staticClass: "info-section" }, [
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Time of Event: \n          "),
+            _vm.todaysRetrogrades.mars_time
+              ? _c("span", { staticClass: "time-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.mars_time))
+                ])
+              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Sign: \n          "),
+            _vm.todaysRetrogrades.mars_sign
+              ? _c("span", { staticClass: "sign-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.mars_sign))
+                ])
+              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Degrees: \n          "),
+            _vm.todaysRetrogrades.mars_degrees
+              ? _c("span", { staticClass: "degrees-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.mars_degrees))
+                ])
+              : _c("span", { staticClass: "degrees-false" }, [
+                  _vm._v("No Event")
+                ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Minutes: \n          "),
+            _vm.todaysRetrogrades.mars_minutes
+              ? _c("span", { staticClass: "minutes-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.mars_minutes))
+                ])
+              : _c("span", { staticClass: "minutes-false" }, [
+                  _vm._v("No Event")
+                ])
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -47879,48 +47902,50 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm.todaysRetrogrades.jupiter_direction !== "Stationary Retrograde"
-            ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-            : _vm._e(),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Time of Event: \n        "),
-            _vm.todaysRetrogrades.jupiter_time
-              ? _c("span", { staticClass: "time-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_time))
-                ])
-              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Sign: \n        "),
-            _vm.todaysRetrogrades.jupiter_sign
-              ? _c("span", { staticClass: "sign-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_sign))
-                ])
-              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Degrees: \n        "),
-            _vm.todaysRetrogrades.jupiter_degrees
-              ? _c("span", { staticClass: "degrees-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_degrees))
-                ])
-              : _c("span", { staticClass: "degrees-false" }, [
-                  _vm._v("No Event")
-                ])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Minutes: \n        "),
-            _vm.todaysRetrogrades.jupiter_minutes
-              ? _c("span", { staticClass: "minutes-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_minutes))
-                ])
-              : _c("span", { staticClass: "minutes-false" }, [
-                  _vm._v("No Event")
-                ])
+          _c("div", { staticClass: "info-section" }, [
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Time of Event: \n          "),
+              _vm.todaysRetrogrades.jupiter_time
+                ? _c("span", { staticClass: "time-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_time))
+                  ])
+                : _c("span", { staticClass: "time-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Sign: \n          "),
+              _vm.todaysRetrogrades.jupiter_sign
+                ? _c("span", { staticClass: "sign-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_sign))
+                  ])
+                : _c("span", { staticClass: "sign-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Degrees: \n          "),
+              _vm.todaysRetrogrades.jupiter_degrees
+                ? _c("span", { staticClass: "degrees-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_degrees))
+                  ])
+                : _c("span", { staticClass: "degrees-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Minutes: \n          "),
+              _vm.todaysRetrogrades.jupiter_minutes
+                ? _c("span", { staticClass: "minutes-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.jupiter_minutes))
+                  ])
+                : _c("span", { staticClass: "minutes-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ])
           ])
         ]
       )
@@ -47957,48 +47982,50 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm.todaysRetrogrades.saturn_direction !== "Stationary Retrograde"
-            ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-            : _vm._e(),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Time of Event: \n        "),
-            _vm.todaysRetrogrades.saturn_time
-              ? _c("span", { staticClass: "time-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_time))
-                ])
-              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Sign: \n        "),
-            _vm.todaysRetrogrades.saturn_sign
-              ? _c("span", { staticClass: "sign-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_sign))
-                ])
-              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Degrees: \n        "),
-            _vm.todaysRetrogrades.saturn_degrees
-              ? _c("span", { staticClass: "degrees-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_degrees))
-                ])
-              : _c("span", { staticClass: "degrees-false" }, [
-                  _vm._v("No Event")
-                ])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Minutes:\n         "),
-            _vm.todaysRetrogrades.saturn_minutes
-              ? _c("span", { staticClass: "minutes-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_minutes))
-                ])
-              : _c("span", { staticClass: "minutes-false" }, [
-                  _vm._v("No Event")
-                ])
+          _c("div", { staticClass: "info-section" }, [
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Time of Event: \n          "),
+              _vm.todaysRetrogrades.saturn_time
+                ? _c("span", { staticClass: "time-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_time))
+                  ])
+                : _c("span", { staticClass: "time-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Sign: \n          "),
+              _vm.todaysRetrogrades.saturn_sign
+                ? _c("span", { staticClass: "sign-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_sign))
+                  ])
+                : _c("span", { staticClass: "sign-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Degrees: \n          "),
+              _vm.todaysRetrogrades.saturn_degrees
+                ? _c("span", { staticClass: "degrees-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_degrees))
+                  ])
+                : _c("span", { staticClass: "degrees-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Minutes:\n          "),
+              _vm.todaysRetrogrades.saturn_minutes
+                ? _c("span", { staticClass: "minutes-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.saturn_minutes))
+                  ])
+                : _c("span", { staticClass: "minutes-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ])
           ])
         ]
       ),
@@ -48027,44 +48054,46 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm.todaysRetrogrades.uranus_direction !== "Stationary Retrograde"
-          ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-          : _vm._e(),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Time of Event: \n        "),
-          _vm.todaysRetrogrades.uranus_time
-            ? _c("span", { staticClass: "time-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_time))
-              ])
-            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Sign: \n        "),
-          _vm.todaysRetrogrades.uranus_sign
-            ? _c("span", { staticClass: "sign-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_sign))
-              ])
-            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Degrees: \n        "),
-          _vm.todaysRetrogrades.uranus_degrees
-            ? _c("span", { staticClass: "degrees-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_degrees))
-              ])
-            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Minutes: \n        "),
-          _vm.todaysRetrogrades.uranus_minutes
-            ? _c("span", { staticClass: "minutes-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_minutes))
-              ])
-            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        _c("div", { staticClass: "info-section" }, [
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Time of Event: \n          "),
+            _vm.todaysRetrogrades.uranus_time
+              ? _c("span", { staticClass: "time-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_time))
+                ])
+              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Sign: \n          "),
+            _vm.todaysRetrogrades.uranus_sign
+              ? _c("span", { staticClass: "sign-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_sign))
+                ])
+              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Degrees: \n          "),
+            _vm.todaysRetrogrades.uranus_degrees
+              ? _c("span", { staticClass: "degrees-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_degrees))
+                ])
+              : _c("span", { staticClass: "degrees-false" }, [
+                  _vm._v("No Event")
+                ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Minutes: \n          "),
+            _vm.todaysRetrogrades.uranus_minutes
+              ? _c("span", { staticClass: "minutes-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.uranus_minutes))
+                ])
+              : _c("span", { staticClass: "minutes-false" }, [
+                  _vm._v("No Event")
+                ])
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -48092,44 +48121,46 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm.todaysRetrogrades.neptune_direction !== "Stationary Retrograde"
-          ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-          : _vm._e(),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Time of Event: \n        "),
-          _vm.todaysRetrogrades.neptune_time
-            ? _c("span", { staticClass: "time-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_time))
-              ])
-            : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Sign: \n        "),
-          _vm.todaysRetrogrades.neptune_sign
-            ? _c("span", { staticClass: "sign-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_sign))
-              ])
-            : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Degrees: \n        "),
-          _vm.todaysRetrogrades.neptune_degrees
-            ? _c("span", { staticClass: "degrees-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_degrees))
-              ])
-            : _c("span", { staticClass: "degrees-false" }, [_vm._v("No Event")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "info" }, [
-          _vm._v("Minutes: \n        "),
-          _vm.todaysRetrogrades.neptune_minutes
-            ? _c("span", { staticClass: "minutes-true" }, [
-                _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_minutes))
-              ])
-            : _c("span", { staticClass: "minutes-false" }, [_vm._v("No Event")])
+        _c("div", { staticClass: "info-section" }, [
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Time of Event: \n          "),
+            _vm.todaysRetrogrades.neptune_time
+              ? _c("span", { staticClass: "time-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_time))
+                ])
+              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Sign: \n          "),
+            _vm.todaysRetrogrades.neptune_sign
+              ? _c("span", { staticClass: "sign-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_sign))
+                ])
+              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Degrees: \n          "),
+            _vm.todaysRetrogrades.neptune_degrees
+              ? _c("span", { staticClass: "degrees-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_degrees))
+                ])
+              : _c("span", { staticClass: "degrees-false" }, [
+                  _vm._v("No Event")
+                ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "info" }, [
+            _vm._v("Minutes: \n          "),
+            _vm.todaysRetrogrades.neptune_minutes
+              ? _c("span", { staticClass: "minutes-true" }, [
+                  _vm._v(_vm._s(_vm.todaysRetrogrades.neptune_minutes))
+                ])
+              : _c("span", { staticClass: "minutes-false" }, [
+                  _vm._v("No Event")
+                ])
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -48163,48 +48194,50 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm.todaysRetrogrades.pluto_direction !== "Stationary Retrograde"
-            ? _c("br", { staticStyle: { "margin-top": "1.5px" } })
-            : _vm._e(),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Time of Event: \n        "),
-            _vm.todaysRetrogrades.pluto_time
-              ? _c("span", { staticClass: "time-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_time))
-                ])
-              : _c("span", { staticClass: "time-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Sign: \n        "),
-            _vm.todaysRetrogrades.pluto_sign
-              ? _c("span", { staticClass: "sign-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_sign))
-                ])
-              : _c("span", { staticClass: "sign-false" }, [_vm._v("No Event")])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Degrees: \n        "),
-            _vm.todaysRetrogrades.pluto_degrees
-              ? _c("span", { staticClass: "degrees-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_degrees))
-                ])
-              : _c("span", { staticClass: "degrees-false" }, [
-                  _vm._v("No Event")
-                ])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "info" }, [
-            _vm._v("Minutes: \n        "),
-            _vm.todaysRetrogrades.pluto_minutes
-              ? _c("span", { staticClass: "minutes-true" }, [
-                  _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_minutes))
-                ])
-              : _c("span", { staticClass: "minutes-false" }, [
-                  _vm._v("No Event")
-                ])
+          _c("div", { staticClass: "info-section" }, [
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Time of Event: \n          "),
+              _vm.todaysRetrogrades.pluto_time
+                ? _c("span", { staticClass: "time-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_time))
+                  ])
+                : _c("span", { staticClass: "time-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Sign: \n          "),
+              _vm.todaysRetrogrades.pluto_sign
+                ? _c("span", { staticClass: "sign-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_sign))
+                  ])
+                : _c("span", { staticClass: "sign-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Degrees: \n          "),
+              _vm.todaysRetrogrades.pluto_degrees
+                ? _c("span", { staticClass: "degrees-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_degrees))
+                  ])
+                : _c("span", { staticClass: "degrees-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "info" }, [
+              _vm._v("Minutes: \n          "),
+              _vm.todaysRetrogrades.pluto_minutes
+                ? _c("span", { staticClass: "minutes-true" }, [
+                    _vm._v(_vm._s(_vm.todaysRetrogrades.pluto_minutes))
+                  ])
+                : _c("span", { staticClass: "minutes-false" }, [
+                    _vm._v("No Event")
+                  ])
+            ])
           ])
         ]
       )
@@ -48220,6 +48253,9 @@ var render = function() {
           ", 2018\n    "
       ),
       _c("button", { on: { click: _vm.addDay } }, [_vm._v("Next Day")]),
+      _c("br"),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.getToday } }, [_vm._v("Today")]),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -48470,11 +48506,17 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "nav-menu" }, [
         _c("a", { attrs: { href: "/" } }, [_vm._v("Home")]),
-        _vm._v(" |\n    "),
+        _vm._v(" "),
+        _c("span", { staticClass: "seperator" }, [_vm._v("|")]),
+        _vm._v(" "),
         _c("a", { attrs: { href: "/how-to" } }, [_vm._v("How To Use")]),
-        _vm._v(" |\n    "),
+        _vm._v(" "),
+        _c("span", { staticClass: "seperator" }, [_vm._v("|")]),
+        _vm._v(" "),
         _c("a", { attrs: { href: "/about" } }, [_vm._v("About")]),
-        _vm._v(" |\n    "),
+        _vm._v(" "),
+        _c("span", { staticClass: "seperator" }, [_vm._v("|")]),
+        _vm._v(" "),
         _c("a", { attrs: { href: "/api" } }, [_vm._v("API")])
       ]),
       _vm._v(" "),
