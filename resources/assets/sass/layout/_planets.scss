@@ -70,7 +70,6 @@ hr {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
-  border-radius: 50%;
   position: relative;
 }
 
@@ -78,7 +77,7 @@ hr {
   text-align: center;
   margin: 0px 0px 0px 0px;
   font-family: $miriam;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: $peach;
@@ -108,7 +107,7 @@ hr {
   margin-top: 10px;
   font-family: $miriam;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: $tan;
 }

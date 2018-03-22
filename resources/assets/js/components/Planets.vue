@@ -229,8 +229,8 @@
     </div>
   
     <div class="date-section">
-      <button v-on:click="subtractDay" :disabled="prevIsDisabled">Prev Day</button> {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
-      <button v-on:click="addDay" :disabled="nextIsDisabled">Next Day</button><br>
+      <button v-on:click="subtractDay">Prev Day</button> {{ todaysRetrogrades.month }} {{ todaysRetrogrades.day_of_month }}, 2018
+      <button v-on:click="addDay">Next Day</button><br>
       <button v-on:click="getToday">Today</button>
       <hr>
       <p class="date-info">Select Any 2018 Date:</p>
@@ -297,11 +297,13 @@
         fullDate: '',
         day_of_year: 0,
         month: '',
-        day_of_month: 1,
+        day_of_month: '',
         short_months: ['February', 'April', 'June', 'September', 'November'],
         prev_selected_months: [],
         prevIsDisabled: false,
-        nextIsDisabled: false
+        nextIsDisabled: false,
+        subCounter: 0,
+        addCounter: 0
       }
     },
   
@@ -349,32 +351,55 @@
   
       // Get previous day data and update on button click
       subtractDay() {
-        if (this.day_of_year == 1) {
+
+        // Checks if day of year is 0 and warns user that no data exists beyond 2018
+        if (this.day_of_year == 0) {
           this.prevIsDisabled = true;
-          alert('Our records only contain 2018 data.');
+          alert('Our records only contain 2018 data. We are working on expanding our retrograde database to contain more years.');
         } else {
           this.prevIsDisabled = false;
           this.nextIsDisabled = false;
         }
 
-        this.day_of_year -= 1;
-        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+        // Only change date if Prev Button is returns true
+        if (!this.prevIsDisabled) {
+          if (this.subCounter == 0 && this.addCounter == 0) {
+            this.day_of_year -= 2;
+            this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+            this.subCounter += 1;
+          } else {
+            this.day_of_year -= 1; 
+            this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+            this.subCounter += 1;
+          }
+        }
       },
   
       // Get next day data and update on button click
       addDay() {
+
+        // Checks if day of year is 0 and warns user that no data exists beyond 2018
         if (this.day_of_year == 364) {
           this.nextIsDisabled = true;
-          alert('Our records only contain 2018 data.')
+          alert('Our records only contain 2018 data. We are working on expanding our retrograde database to contain more years.');
         } else {
-          this.nextIsDisabled = false;
           this.prevIsDisabled = false;
+          this.nextIsDisabled = false;
         }
 
-        this.day_of_year += 1;
-        this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+        // Only change date if Next Button is returns true
+        if (!this.nextIsDisabled) {
+          if (this.addCounter == 0 && this.subCounter == 0) {
+            this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+            this.addCounter += 1;
+          } else {
+            this.day_of_year += 1; 
+            this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
+            this.addCounter += 1;
+          }
+        }
       },
-  
+        
       // Get day data from dropdown input on change
       updateDate() {
         try {
@@ -385,9 +410,9 @@
   
           // Update data object with filtered input data
           this.day_of_year = selectedDayofYear - 1;
-          this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];
-          
+          this.todaysRetrogrades = this.allRetrogrades[this.day_of_year];   
         } catch (e) {
+          
           // Catch Error created by selecting month and day in the dropdown with less days than previosly selected month and day
           // e.g., Selecting the November after having selected December 31st. November only has 30 days. 
           if (e.name == 'TypeError') {
@@ -407,6 +432,10 @@
   
         // Fetch todays retrograde data
         this.fetchPlanets(day_of_year);
+
+        // Reset Prev/Next Button Counters
+        this.subCounter = 0;
+        this.addCounter = 0;
       },
   
       testThingy() {
