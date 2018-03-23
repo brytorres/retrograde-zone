@@ -1,8 +1,8 @@
 <template>
   <div style="height: 100%;">
     <div class="wrapper">
-    <Navbar></Navbar>
-    <router-view></router-view>
+      <Navbar></Navbar>
+      <router-view></router-view>
     </div>
     <Footeroonie></Footeroonie>
   </div>

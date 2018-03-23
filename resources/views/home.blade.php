@@ -11,7 +11,6 @@
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bulma.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/code.css') }}">
         
     </head>
     <body>

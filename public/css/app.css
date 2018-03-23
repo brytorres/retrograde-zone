@@ -46,11 +46,6 @@ p {
   width: 97%;
 }
 
-.wrapper::after {
-  content: "";
-  display: block;
-}
-
 .title {
   position: relative;
   padding-top: 20px;
@@ -96,7 +91,7 @@ p {
 }
 
 .text-box p {
-  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .text-box a {
@@ -117,13 +112,14 @@ p {
 }
 
 .note a {
-  color: #ada296;
+  font-weight: bold;
+  color: #e2856e;
   text-decoration: none;
 }
 
 .note a:hover {
   color: #794bf7;
-  border-bottom: 3px solid #794bf7;
+  border-bottom: 2px solid #794bf7;
 }
 
 .error-404 {
@@ -383,11 +379,13 @@ td span {
 td code {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 90%;
+  background: none;
   color: #e3e3e3;
 }
 
 code,
 pre {
+  margin-top: 5px;
   color: black;
   text-shadow: none;
   background: #e9e9e9;
@@ -412,13 +410,10 @@ pre {
   bottom: 0;
   left: 0;
   text-align: center;
-  font-family: "Assistant", sans-serif;
-  font-weight: 500;
-  color: #6e6e6e;
 }
 
 .footer p {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .footer a {

@@ -1,37 +1,3 @@
-// pre {
-//   font-family: "Courier 10 Pitch", Courier, monospace;
-//   font-size: 90%;
-//   line-height: 1.2em;
-//   white-space: pre;
-//   white-space: pre-wrap;
-//   white-space: -moz-pre-wrap;
-//   white-space: -o-pre-wrap;
-// }
-
-// code {
-//   color: #555;
-//   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-//   font-size: 95%;
-//   line-height: 140%;
-//   white-space: pre;
-//   white-space: pre-wrap;
-//   white-space: -moz-pre-wrap;
-//   white-space: -o-pre-wrap;
-//   background: #faf8f0;
-//   display: block;
-//   padding: 0.5em 0em;
-//   border: 1px solid #bebab0;
-// }
-
-// table, th, td {
-//     width: 100%;
-//     border: 1px solid $grey;
-//     border-collapse: collapse;
-//     // border-spacing: 25px;
-//     padding: 15px;
-
-// }
-
 table {
   width: 100%;
   font-size: 18px;
@@ -66,12 +32,14 @@ td{
   code {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 90%;
+    background: none;
     color: #e3e3e3  ;
   }
 }
 
 code,
 pre {
+  margin-top: 5px;
 	color: black;
 	text-shadow: none;
 	background: #e9e9e9;
@@ -82,11 +50,9 @@ pre {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
-
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;

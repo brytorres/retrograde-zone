@@ -201,9 +201,6 @@
         }
         </code></pre>
     </div>
-    <div class="note">
-      <p>A note.</p>
-    </div>
   </div>
 </template>
 

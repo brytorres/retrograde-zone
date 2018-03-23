@@ -35,26 +35,10 @@ p {
   color: #e2e2e2;
 }
 
-// #app {
-//   height:100%;
-// }
-
 .wrapper {
-    // width:100%;
-    // min-width:1300px;
-    // padding-bottom: 40px;
-    // position: relative;  
-    // height: auto !important; 
-    // height: 100%; 
-    // margin-bottom: -50px;
   margin: 0 auto;
   padding-top: 10px;
   width: 97%;
-}
-
-.wrapper::after {
-  content: "";
-  display: block;
 }
 
 .title {
@@ -109,7 +93,7 @@ p {
   }
 
   p {
-    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   a {
@@ -134,13 +118,14 @@ p {
   }
 
   a {
-    color: $tan;
+    font-weight: bold;
+    color: $peach;
     text-decoration: none;
   }
 
   a:hover {
     color: rgb(121, 75, 247);
-    border-bottom: 3px solid rgb(121, 75, 247);
+    border-bottom: 2px solid rgb(121, 75, 247);
   }
 }
 
