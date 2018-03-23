@@ -10,13 +10,17 @@
         <title>Retrograde Zone - What Planets Are In Retrograde?</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bulma.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/code.css') }}">
+        
     </head>
     <body>
         
         <div id="app">
             <App></App>
         </div>
-        
+    
     <script src="{{ asset('js/app.js') }}"></script>
+    
     </body>
 </html>

@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('planets', 'PlanetController@index');
-Route::get('planets-day/{id}', 'PlanetController@show');
+Route::get('daily-planets/{id}', 'PlanetController@show');
