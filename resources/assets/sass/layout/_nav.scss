@@ -40,11 +40,19 @@
   a {
     color: rgb(210,210,210);
     text-decoration: none;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
   }
 
   a:hover {
     color: rgb(121, 75, 247);
-    border-bottom: 3px solid rgb(121, 75, 247);
+    // border-bottom: 3px solid rgb(121, 75, 247);
+  }
+
+  .router-link-exact-active {
+    color: rgb(121, 75, 247);
   }
 }
 
