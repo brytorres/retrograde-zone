@@ -1914,7 +1914,57 @@ h1 {
 }
 
 p {
-  line-height: 10px;
+  font-family: "Assistant", sans-serif;
+  font-size: 18px;
+  color: #e2e2e2;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+}
+
+.title h2 {
+  font-family: "Miriam Libre", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: #e2856e;
+  background: -webkit-gradient(linear, right top, left top, from(#ada296), to(#e2856e));
+  background: linear-gradient(to left, #ada296 0%, #e2856e 100%);
+}
+
+.text-box {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.text-box a {
+  color: #d2d2d2;
+  text-decoration: none;
+}
+
+.text-box a:hover {
+  color: #794bf7;
+  border-bottom: 3px solid #794bf7;
+}
+
+.note p {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #ada296;
 }
 
 .error-404 {

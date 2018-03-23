@@ -5,11 +5,11 @@
       <p class="nav-subtitle">What's In Retrograde?</p>
     </div>
     <div class="nav-menu">
-      <a href="/">Home</a>&nbsp;<span class="seperator">|</span>
-      <a href="/how-to">How To Use</a>&nbsp;<span class="seperator">|</span>
-      <a href="/about">About</a>&nbsp;<span class="seperator">|</span>
-      <a href="/api">API</a>
-    </div> 
+      <router-link :to="{ name: 'planets' }">Home</router-link>&nbsp;<span class="seperator">|</span>
+      <router-link :to="{ name: 'About' }">About</router-link>&nbsp;<span class="seperator">|</span>
+      <router-link :to="{ name: 'HowToUse' }">How To Use</router-link>&nbsp;<span class="seperator">|</span>
+      <router-link :to="{ name: 'API' }">API</router-link>
+    </div>
     <br>
   </div>
 </template>

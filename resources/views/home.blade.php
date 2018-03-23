@@ -14,9 +14,7 @@
     <body>
         
         <div id="app">
-            <navbar></navbar>
-            <planets></planets>
-            <footeroonie></footeroonie>
+            <App></App>
         </div>
         
     <script src="{{ asset('js/app.js') }}"></script>
