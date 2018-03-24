@@ -14,14 +14,11 @@ html {
 
 body {
   background: #112d41;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#112d41), to(#2e2e4d));
   background: linear-gradient(to right, #112d41, #2e2e4d);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: "Assistant", sans-serif;
   color: white;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: block;
   padding-bottom: 3rem;
@@ -48,7 +45,7 @@ p {
 
 .title {
   position: relative;
-  padding-top: 20px;
+  padding-top: 0px;
   width: 100%;
 }
 
@@ -60,7 +57,7 @@ p {
   text-align: center;
   letter-spacing: 1px;
   color: white;
-  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
 }
 
 .title h2::before {
@@ -242,61 +239,98 @@ hr {
   border: none;
 }
 
-.planets-section {
-  padding: 1rem 0rem 0rem 0rem;
+.retrograde-section {
+  padding: 10px 0px 0px 0px;
 }
 
-.planet-box {
+.planets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 1fr;
+  grid-gap: 10px;
+  grid-template-areas: "mercury venus mars jupiter" "saturn uranus neptune pluto";
+}
+
+.mercury,
+.venus,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.1);
-  margin: 5px;
   height: 300px;
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
 }
 
-.planet-box:hover {
+.mercury:hover,
+.venus:hover,
+.mars:hover,
+.jupiter:hover,
+.saturn:hover,
+.uranus:hover,
+.neptune:hover,
+.pluto:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.planet-box img {
+.mercury img,
+.venus img,
+.mars img,
+.jupiter img,
+.saturn img,
+.uranus img,
+.neptune img,
+.pluto img {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
   position: relative;
 }
 
-.columns {
-  margin-left: 0;
-  margin-right: 0;
+.mercury {
+  grid-area: mercury;
 }
 
-.column {
-  position: relative;
+.venus {
+  grid-area: venus;
+}
+
+.mars {
+  grid-area: mars;
+}
+
+.jupiter {
+  grid-area: jupiter;
+}
+
+.saturn {
+  grid-area: saturn;
+}
+
+.uranus {
+  grid-area: uranus;
+}
+
+.neptune {
+  grid-area: neptune;
+}
+
+.pluto {
+  grid-area: pluto;
 }
 
 .planet-name {
   text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   font-family: "Miriam Libre", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #e2856e;
-}
-
-.info-section {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  width: 92%;
-}
-
-.info {
-  font-size: 12px;
-  line-height: 18px;
-  margin: 0;
-  font-family: "Assistant", sans-serif;
-  font-weight: 500;
 }
 
 .direction-title {
@@ -308,9 +342,40 @@ hr {
   margin-top: 10px;
   font-family: "Miriam Libre", sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   color: #ada296;
+}
+
+.info-section {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  grid-template-areas: "info-left info-right";
+}
+
+.info-section--left {
+  grid-area: info-left;
+  text-align: left;
+}
+
+.info-section--right {
+  grid-area: info-right;
+  text-align: right;
+}
+
+.info {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  font-family: "Assistant", sans-serif;
+  font-weight: 500;
 }
 
 .info-true {

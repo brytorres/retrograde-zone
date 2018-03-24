@@ -6,13 +6,23 @@ hr {
   border: none;
 }
 
-.planets-section {
-  padding: 1rem 0rem 0rem 0rem;
+.retrograde-section {
+  padding: 10px 0px 0px 0px;
 }
 
-.planet-box {
+.planets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 1fr;
+  grid-gap:10px;
+  grid-template-areas:
+  "mercury venus mars jupiter"
+  "saturn uranus neptune pluto"
+}
+
+%planet-box {
+  position: relative;
   background-color: rgba(255,255,255,0.1); 
-  margin: 5px;
   height: 300px;
   -webkit-transition: background-color 0.3s ease-out;
   -moz-transition: background-color 0.3s ease-out;
@@ -20,49 +30,65 @@ hr {
   transition: background-color 0.3s ease-out;
 }
 
-.planet-box:hover {
+%planet-box:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-.planet-box img {
+%planet-box img {
   margin: 0 auto;
   display: block;
   padding: 0px 0px 5px 0px;
   position: relative;
 }
 
-.columns {
-    margin-left: 0;
-    margin-right: 0;
+.mercury {
+  @extend %planet-box;
+  grid-area: mercury;
 }
 
-.column {
-  position: relative;
+.venus {
+  @extend %planet-box;
+  grid-area: venus;
+}
+
+.mars {
+  @extend %planet-box;
+  grid-area: mars;
+}
+
+.jupiter {
+  @extend %planet-box;
+  grid-area: jupiter;
+}
+
+.saturn {
+  @extend %planet-box;
+  grid-area: saturn;
+}
+
+.uranus {
+  @extend %planet-box;
+  grid-area: uranus;
+}
+
+.neptune {
+  @extend %planet-box;
+  grid-area: neptune;
+}
+
+.pluto {
+  @extend %planet-box;
+  grid-area: pluto;
 }
 
 .planet-name {
   text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   font-family: $miriam;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: $peach;
-}
-
-.info-section {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  width: 92%;
-}
-
-.info {
-  font-size: 12px;
-  line-height: 18px;
-  margin: 0;
-  font-family: $assistant;
-  font-weight: 500;
 }
 
 .direction-title {
@@ -74,9 +100,42 @@ hr {
   margin-top: 10px;
   font-family: $miriam;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   color: $tan;
+}
+
+.info-section {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  // padding: 20px 20px 0px 20px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr;
+  grid-gap:10px;
+  grid-template-areas:
+  "info-left info-right"
+}
+
+.info-section--left {
+  grid-area: info-left;
+  text-align: left;
+}
+
+.info-section--right {
+  grid-area: info-right;
+  text-align: right;
+}
+
+.info {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  font-family: $assistant;
+  font-weight: 500;
 }
 
 .info-true {
