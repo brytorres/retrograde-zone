@@ -1,7 +1,7 @@
 <template>
   <div class="planets-section">
     <div class="columns">
-      <div class="column planet-box" style="margin-left:0;">
+      <div class="column planet-box">
         <h2 class="planet-name">Mercury</h2>
         <img :src="'img/Mercury.png'" alt="Mercury">
         <p class="info" style="text-align:center;padding-bottom:10px;">
@@ -86,7 +86,7 @@
         </div>
       </div>
   
-      <div class="column planet-box" style="margin-right:0;">
+      <div class="column planet-box">
         <h2 class="planet-name">Jupiter</h2>
         <img :src="'img/Jupiter.png'" alt="Jupiter">
         <p class="info" style="text-align:center;padding-bottom:10px;"> 
@@ -115,7 +115,7 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column planet-box" style="margin-left:0;">
+      <div class="column planet-box">
         <h2 class="planet-name">Saturn</h2>
         <img :src="'img/Saturn.png'" alt="Saturn">
         <p class="info" style="text-align:center;padding-bottom:10px;"> 
@@ -199,7 +199,7 @@
         </div>
       </div>
   
-      <div class="column planet-box" style="margin-right:0;">
+      <div class="column planet-box">
         <h2 class="planet-name">Pluto</h2>
         <img :src="'img/Pluto.png'" alt="Pluto">
         <p class="info" style="text-align:center;padding-bottom:10px;"> 
