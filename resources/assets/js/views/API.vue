@@ -23,7 +23,6 @@
           <td><a href="http://retrograde.zone/api/planets/">http://retrograde.zone/api/planets/</a></td>
         </tr>
       </table>
-      <br>
       <p style="margin-bottom: 0px;"><strong>Sample Response</strong></p>
       <pre><code>
       {
@@ -147,7 +146,6 @@
             <td>The <code>day_of_year</code> value ranges from 1-365. <a href="https://stackoverflow.com/a/26426761">This Stack Overflow answer</a>  provides JavaScript code than can be used to get the current day of year as an integer. That integer can then be passed into the API request which in turn provides the data for the desired day.</td>
           </tr>
         </table>
-        <br>
         <p><strong>Sample Response</strong></p>
         <pre><code>
         {
