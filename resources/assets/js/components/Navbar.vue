@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="nav-title">
-      <h1>Retrograde Zone</h1>
+      <h1><router-link :to="{ name: 'planets' }">Retrograde Zone</router-link></h1>
       <p class="nav-subtitle">What's In Retrograde?</p>
     </div>
     <div class="nav-menu">

@@ -5,9 +5,18 @@
 .nav-title {
   float: left;
   width: 50%;
+
+  a {
+  color: white;
+  margin: 0px;
+  font-family: $miriam;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 }
 
-.nav-title h1{
+h1{
   color: white;
   margin: 0px;
   font-family: $miriam;

@@ -95,6 +95,12 @@ p {
   margin-top: 0px;
 }
 
+.text-box ul {
+  font-family: "Assistant", sans-serif;
+  font-size: 18px;
+  color: #bbbbbb;
+}
+
 .text-box a {
   color: #88a2aa;
   text-decoration: none;
@@ -142,6 +148,24 @@ p {
   top: 48%;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.fade-enter-active {
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
 .nav {
   margin: 5px 0px 40px 0px;
 }
@@ -151,7 +175,16 @@ p {
   width: 50%;
 }
 
-.nav-title h1 {
+.nav-title a {
+  color: white;
+  margin: 0px;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h1 {
   color: white;
   margin: 0px;
   font-family: "Miriam Libre", sans-serif;
@@ -201,47 +234,6 @@ p {
   color: #e2856e;
 }
 
-.planets-section {
-  padding: 1rem 0rem 0rem 0rem;
-}
-
-.date-section {
-  text-align: center;
-  margin: 10px 0px 30px 0px;
-  font-family: "Assistant", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.date-section button {
-  background: none;
-  color: #c4c4c4;
-  border: 1px #6d6d6d solid;
-  border-radius: 0px;
-  padding: 5px 10px 5px 10px;
-  margin: 0px 10px 0px 10px;
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-
-.date-section button:hover {
-  background: rgba(226, 133, 110, 0.205);
-  color: white;
-  border: 1px #aaaaaa solid;
-}
-
-.date-section button:active {
-  background: rgba(228, 154, 136, 0.699);
-  color: white;
-  border: 1px #d8d8d8 solid;
-}
-
-.date-info {
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
 hr {
   width: 40%;
   height: 1px;
@@ -250,14 +242,27 @@ hr {
   border: none;
 }
 
+.planets-section {
+  padding: 1rem 0rem 0rem 0rem;
+}
+
 .planet-box {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   margin: 5px;
-  height: 280px;
+  height: 300px;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
 .planet-box:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.planet-box img {
+  margin: 0 auto;
+  display: block;
+  padding: 0px 0px 5px 0px;
+  position: relative;
 }
 
 .columns {
@@ -266,13 +271,6 @@ hr {
 }
 
 .column {
-  position: relative;
-}
-
-.planet-box img {
-  margin: 0 auto;
-  display: block;
-  padding: 0px 0px 5px 0px;
   position: relative;
 }
 
@@ -315,40 +313,52 @@ hr {
   color: #ada296;
 }
 
-.time-true {
+.info-true {
   float: right;
 }
 
-.time-false {
+.info-false {
   float: right;
   color: #6e6e6e;
 }
 
-.sign-true {
-  float: right;
+.date-section {
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
-.sign-false {
-  float: right;
-  color: #6e6e6e;
+.date-section button {
+  background-color: rgba(226, 133, 110, 0);
+  color: #c4c4c4;
+  border: 1px #6d6d6d solid;
+  border-radius: 0px;
+  padding: 5px 10px 5px 10px;
+  margin: 0px 10px 0px 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
-.degrees-true {
-  float: right;
+.date-section button:hover {
+  background-color: rgba(226, 133, 110, 0.205);
+  color: white;
+  border: 1px #aaaaaa solid;
 }
 
-.degrees-false {
-  float: right;
-  color: #6e6e6e;
+.date-section button:active {
+  background-color: rgba(228, 154, 136, 0.699);
+  color: white;
+  border: 1px #d8d8d8 solid;
 }
 
-.minutes-true {
-  float: right;
-}
-
-.minutes-false {
-  float: right;
-  color: #6e6e6e;
+.date-info {
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 table {
@@ -408,6 +418,36 @@ pre {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+}
+
+.date-section-example {
+  text-align: center;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.date-section-example button {
+  background: none;
+  color: #c4c4c4;
+  border: 1px #6d6d6d solid;
+  border-radius: 0px;
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.date-section-example button:hover {
+  background: rgba(226, 133, 110, 0.205);
+  color: white;
+  border: 1px #aaaaaa solid;
+}
+
+.date-section-example button:active {
+  background: rgba(228, 154, 136, 0.699);
+  color: white;
+  border: 1px #d8d8d8 solid;
 }
 
 .footer {

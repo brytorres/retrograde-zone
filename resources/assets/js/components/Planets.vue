@@ -12,20 +12,20 @@
         <!-- <br v-if="todaysRetrogrades.mercury_direction !== 'Stationary Retrograde'" style="margin-top:1.5px;"> -->
         <div class="info-section">
           <p class="info">Time of Event:
-            <span class="time-true" v-if="todaysRetrogrades.mercury_time">{{ todaysRetrogrades.mercury_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mercury_time">{{ todaysRetrogrades.mercury_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.mercury_sign">{{ todaysRetrogrades.mercury_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mercury_sign">{{ todaysRetrogrades.mercury_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.mercury_degrees">{{ todaysRetrogrades.mercury_degrees }}&deg; </span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mercury_degrees">{{ todaysRetrogrades.mercury_degrees }}&deg; </span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.mercury_minutes">{{ todaysRetrogrades.mercury_minutes }}'</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mercury_minutes">{{ todaysRetrogrades.mercury_minutes }}'</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -40,20 +40,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.venus_time">{{ todaysRetrogrades.venus_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.venus_time">{{ todaysRetrogrades.venus_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.venus_sign">{{ todaysRetrogrades.venus_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.venus_sign">{{ todaysRetrogrades.venus_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.venus_degrees">{{ todaysRetrogrades.venus_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.venus_degrees">{{ todaysRetrogrades.venus_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.venus_minutes">{{ todaysRetrogrades.venus_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.venus_minutes">{{ todaysRetrogrades.venus_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -68,20 +68,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.mars_time">{{ todaysRetrogrades.mars_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mars_time">{{ todaysRetrogrades.mars_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.mars_sign">{{ todaysRetrogrades.mars_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mars_sign">{{ todaysRetrogrades.mars_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.mars_degrees">{{ todaysRetrogrades.mars_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mars_degrees">{{ todaysRetrogrades.mars_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.mars_minutes">{{ todaysRetrogrades.mars_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.mars_minutes">{{ todaysRetrogrades.mars_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -96,20 +96,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.jupiter_time">{{ todaysRetrogrades.jupiter_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.jupiter_time">{{ todaysRetrogrades.jupiter_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.jupiter_sign">{{ todaysRetrogrades.jupiter_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.jupiter_sign">{{ todaysRetrogrades.jupiter_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.jupiter_degrees">{{ todaysRetrogrades.jupiter_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.jupiter_degrees">{{ todaysRetrogrades.jupiter_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.jupiter_minutes">{{ todaysRetrogrades.jupiter_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.jupiter_minutes">{{ todaysRetrogrades.jupiter_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -125,20 +125,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.saturn_time">{{ todaysRetrogrades.saturn_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.saturn_time">{{ todaysRetrogrades.saturn_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.saturn_sign">{{ todaysRetrogrades.saturn_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.saturn_sign">{{ todaysRetrogrades.saturn_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.saturn_degrees">{{ todaysRetrogrades.saturn_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.saturn_degrees">{{ todaysRetrogrades.saturn_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes:
-            <span class="minutes-true" v-if="todaysRetrogrades.saturn_minutes">{{ todaysRetrogrades.saturn_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.saturn_minutes">{{ todaysRetrogrades.saturn_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -153,20 +153,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.uranus_time">{{ todaysRetrogrades.uranus_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.uranus_time">{{ todaysRetrogrades.uranus_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.uranus_sign">{{ todaysRetrogrades.uranus_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.uranus_sign">{{ todaysRetrogrades.uranus_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.uranus_degrees">{{ todaysRetrogrades.uranus_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.uranus_degrees">{{ todaysRetrogrades.uranus_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.uranus_minutes">{{ todaysRetrogrades.uranus_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.uranus_minutes">{{ todaysRetrogrades.uranus_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -181,20 +181,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.neptune_time">{{ todaysRetrogrades.neptune_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.neptune_time">{{ todaysRetrogrades.neptune_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.neptune_sign">{{ todaysRetrogrades.neptune_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.neptune_sign">{{ todaysRetrogrades.neptune_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.neptune_degrees">{{ todaysRetrogrades.neptune_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.neptune_degrees">{{ todaysRetrogrades.neptune_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.neptune_minutes">{{ todaysRetrogrades.neptune_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.neptune_minutes">{{ todaysRetrogrades.neptune_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>
@@ -209,20 +209,20 @@
         </p>
         <div class="info-section">
           <p class="info">Time of Event: 
-            <span class="time-true" v-if="todaysRetrogrades.pluto_time">{{ todaysRetrogrades.pluto_time }}</span>
-            <span class="time-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.pluto_time">{{ todaysRetrogrades.pluto_time }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Sign: 
-            <span class="sign-true" v-if="todaysRetrogrades.pluto_sign">{{ todaysRetrogrades.pluto_sign }}</span>
-            <span class="sign-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.pluto_sign">{{ todaysRetrogrades.pluto_sign }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Degrees: 
-            <span class="degrees-true" v-if="todaysRetrogrades.pluto_degrees">{{ todaysRetrogrades.pluto_degrees }}</span>
-            <span class="degrees-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.pluto_degrees">{{ todaysRetrogrades.pluto_degrees }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
           <p class="info">Minutes: 
-            <span class="minutes-true" v-if="todaysRetrogrades.pluto_minutes">{{ todaysRetrogrades.pluto_minutes }}</span>
-            <span class="minutes-false" v-else>No Event</span>
+            <span class="info-true" v-if="todaysRetrogrades.pluto_minutes">{{ todaysRetrogrades.pluto_minutes }}</span>
+            <span class="info-false" v-else>No Event</span>
           </p>
         </div>
       </div>

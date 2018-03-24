@@ -2,13 +2,21 @@
   <div class="content">
     <div class="title">
       <h2>How To Use</h2>
-      <div class="border"></div>
     </div>
-    <div class="text-box">
-      <p>When you visit the site, it will automatically load todays retrograde data.</p>
+    <div class="text-box" style="padding-top:20px;">
+      <p>Upon visiting the site, the home page automatically loads todays retrograde data for each planet. In each planets info box you will find the following information:</p>
+      <ul>
+        <li>Which direction the planet appears to move in</li>
+        <li>The astrological sign which the planet in in front of</li>
+        <li>The degree of the Zodiac they currently occupy</li>
+        <li>The planetary minutes based on the Chaldean Order</li>
+      </ul>
 
       <h3>Date Navigation Controls</h3>
       <p>Below the planets info boxes, you will find the date navigation section that looks like the following:</p>
+    </div><br>  
+    <div class="note" style="text-align:center;">
+      <p>NOTE: This is a non-functional date component.</p>
     </div>
     <div class="date-section">
       <button>Prev Day</button> January 1, 2018
@@ -64,6 +72,11 @@
           <option>29</option>
           <option>30</option>
         </select>
+    </div><br>
+    <div class="text-box">
+      <p>In the first row, you will find two buttons. Clicking on <span class="date-section-example"><button>Prev Day</button></span> will display the retrograde data for the day before and <span class="date-section-example"><button>Next Day</button></span> will display the retrograde data for the next day. Clicking <span class="date-section-example"><button>Today</button></span> will display todays data again.</p><br>
+      <p>Next you will find two dropdown boxes that allow you to enter any month and day of the 2018 year. It will automatically load the data for you each time you select a different option.</p><br>
+      <p>Using a combination of the buttons and dropdown boxes, you are able to access any days retrograde data very quickly and effortlessly.</p>
     </div>
   </div>
 </template>

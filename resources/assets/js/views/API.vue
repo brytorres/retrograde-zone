@@ -2,13 +2,18 @@
   <div class="content">
     <div class="title">
       <h2>JSON API Documentation</h2>
+      
     </div>
     <div class="text-box">
+      <p>A simple API is available to all who wish to use it. At the moment, it provides planetary retrograde data for all of 2018. Each JSON object represents a day and contains data for direction and information about specific events.</p><br><p> Direction is available each day, while data for time, astrological sign, degrees and minutes is available only on days when the direction changes. Below you will find the details for accessing the Retrograde Zone API.</p><br>
+      <div class="note">
+        <p style="width:100%;">More data is currently being collected to expand what information is available for each day. The API will soon provide the sign and degrees for each planet daily as well. </p>
+      </div>
       <h3>Get All Retrograde Data</h3>
       <table>
         <tr>
           <td><strong>Description</strong></td>
-          <td>Provides retrograde data for all days in the 2018 year.</td>
+          <td>Provides retrograde data for each day in the 2018 year as a JSON object.</td>
         </tr>
         <tr>
           <td><strong>Endpoint</strong></td>
@@ -22,7 +27,7 @@
           <td><strong>Example</strong></td>
           <td><a href="http://retrograde.zone/api/planets/">http://retrograde.zone/api/planets/</a></td>
         </tr>
-      </table>
+      </table><br>
       <p style="margin-bottom: 0px;"><strong>Sample Response</strong></p>
       <pre><code>
       {
@@ -127,11 +132,11 @@
         <table>
           <tr>
             <td><strong>Description</strong></td>
-            <td>Provides retrograde data for one day in the 2018 year.</td>
+            <td>Provides retrograde data for one day in the 2018 year as a JSON object.</td>
           </tr>
           <tr>
             <td><strong>Endpoint</strong></td>
-            <td>/api/daily-planets/{day_of_year}</td>
+            <td>/api/daily-planets/{day_of_year}/</td>
           </tr>
           <tr>
             <td><strong>Method</strong></td>
@@ -139,13 +144,13 @@
           </tr>
           <tr>
             <td><strong>Example</strong></td>
-            <td><a href="http://retrograde.zone/api/daily-planets/1">http://retrograde.zone/api/planets/{day_of_year}</a></td>
+            <td><a href="http://retrograde.zone/api/daily-planets/1">http://retrograde.zone/api/planets/{day_of_year}/</a></td>
           </tr>
           <tr>
             <td><strong>Notes</strong></td>
             <td>The <code>day_of_year</code> value ranges from 1-365. <a href="https://stackoverflow.com/a/26426761">This Stack Overflow answer</a>  provides JavaScript code than can be used to get the current day of year as an integer. That integer can then be passed into the API request which in turn provides the data for the desired day.</td>
           </tr>
-        </table>
+        </table><br>
         <p><strong>Sample Response</strong></p>
         <pre><code>
         {

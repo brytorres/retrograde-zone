@@ -1,0 +1,29 @@
+.date-section-example {
+  text-align: center;
+  font-family: $assistant;
+  font-weight: 400;
+  font-size: 18px;
+
+  button {
+    background: none;
+    color: rgb(196, 196, 196);
+    border: 1px rgb(109, 109, 109) solid;
+    border-radius: 0px;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  button:hover {
+    background: rgba(226, 133, 110, 0.205);
+    color: white;
+    border: 1px rgb(170, 170, 170) solid;
+  }
+
+  button:active {
+    background: rgba(228, 154, 136, 0.699);
+    color: white;
+    border: 1px rgb(216, 216, 216) solid;
+  }
+}

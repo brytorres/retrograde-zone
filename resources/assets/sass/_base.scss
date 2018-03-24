@@ -97,6 +97,12 @@ p {
     margin-top : 0px;
   }
 
+  ul {
+    font-family: $assistant;
+    font-size: 18px;
+    color: #bbbbbb;
+  }
+
   a {
     color: $grey;
     text-decoration: none;
@@ -148,4 +154,17 @@ p {
     top: 48%;
     // right: 50%;
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
